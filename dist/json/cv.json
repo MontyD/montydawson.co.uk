@@ -1,0 +1,44 @@
+{
+	"events": [{
+		"title": "Freelance",
+		"subtitle": "Web Developer",
+		"description": "My time at Victoria Forms sparked my interest in web-development. My role initially involved working closely with clients (mainly local governments) to develop and maintain their online forms - working to a very high level of precision and guarantying that all work signed-off was production-ready. As I developed my skills I began to get involved in maintaining and developing the JavaScript and CSS of the company’s main product – ensuring usability and good design.",
+		"time": "2015 - ongoing",
+		"type": "work",
+		"render": "left",
+		"join": true
+	}, {
+		"title": "The Well Coffeeshop",
+		"subtitle": "Volunteer Barista",
+		"description": "My time at Victoria Forms sparked my interest in web-development. My role initially involved working closely with clients (mainly local governments) to develop and maintain their online forms - working to a very high level of precision and guarantying that all work signed-off was production-ready. As I developed my skills I began to get involved in maintaining and developing the JavaScript and CSS of the company’s main product – ensuring usability and good design.",
+		"time": "2015 - ongoing",
+		"type": "Voluntary",
+		"priority": "normal",
+		"render": "right",
+		"join": true
+	}, {
+		"title": "Victoria Forms",
+		"subtitle": "eForms Consultant",
+		"description": "My time at Victoria Forms sparked my interest in web-development. My role initially involved working closely with clients (mainly local governments) to develop and maintain their online forms - working to a very high level of precision and guarantying that all work signed-off was production-ready. As I developed my skills I began to get involved in maintaining and developing the JavaScript and CSS of the company’s main product – ensuring usability and good design.",
+		"time": "2014 - ongoing",
+		"type": "work",
+		"render": "full",
+		"join": false
+	}, {
+		"title": "The Whitworth Co-Partnership",
+		"subtitle": "Temporary Admin",
+		"description": "My time at Victoria Forms sparked my interest in web-development. My role initially involved working closely with clients (mainly local governments) to develop and maintain their online forms - working to a very high level of precision and guarantying that all work signed-off was production-ready. As I developed my skills I began to get involved in maintaining and developing the JavaScript and CSS of the company’s main product – ensuring usability and good design.",
+		"time": "2014",
+		"type": "work",
+		"render": "left",
+		"join": true
+	}, {
+		"title": "BA Hons History - First Class",
+		"subtitle": "Queen Mary University of London",
+		"description": "My time at Victoria Forms sparked my interest in web-development. My role initially involved working closely with clients (mainly local governments) to develop and maintain their online forms - working to a very high level of precision and guarantying that all work signed-off was production-ready. As I developed my skills I began to get involved in maintaining and developing the JavaScript and CSS of the company’s main product – ensuring usability and good design.",
+		"time": "2011 - 2014",
+		"type": "Education",
+		"render": "full",
+		"join": false
+	}]
+}

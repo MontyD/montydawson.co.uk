@@ -1,0 +1,443 @@
+//** Variables
+$whiteFont: #FAFAFA;
+$backgroundColor: #E0E0E0;
+$darkColor: #2B2E4A;
+$accent: #00BCD4;
+$dark: #004D40;
+$brightAccent: #FBC02D;
+$subtleText: #9E9E9E;
+$darkBlue: #3E4F69;
+$slightBackground: rgba(224, 224, 224, 0.2);
+$documentWidth: 1200px;
+body {
+    margin     : 0;
+    padding    : 0;
+    height     : 100%;
+    font-family: 'Raleway', Helvetica, sans-serif, arial;
+    overflow-x : hidden;
+    background : rgba(230,230,230,0.3);
+    color      : #212121;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: normal;
+    color      : $whiteFont;
+}
+a {
+    padding         : 10px;
+    border-radius   : 4px;
+    background-color: transparent;
+    transition      : background-color 0.5s ease;
+}
+a.linkLikeAButton,
+button {
+    color          : $whiteFont;
+    display        : inline-block;
+    margin         : 0.8em 0.5em;
+    text-decoration: none;
+    border         : 1px solid $whiteFont;
+    padding        : 0.5em;
+    border-radius  : 4px;
+    background     : transparent;
+    transition     : background 0.3s ease, color 0.3s ease;
+}
+.innerText {
+    max-width : 700px;
+    margin    : 0.5em auto;
+    text-align: justify;
+    box-sizing: border-box;
+    padding   : 0 1em;
+}
+.italic {
+    font-style: italic;
+}
+.alignRight {
+    text-align: right;
+}
+.slightText {
+    color     : #8A8A8A;
+    font-style: italic;
+    a {
+        color          : #616161;
+        text-decoration: none;
+        padding        : 0;
+        margin         : 0;
+    }
+}
+.container {
+    display   : block;
+    position  : relative;
+    width     : 100%;
+    max-width : 1200px;
+    margin    : 0 auto;
+    padding   : 0 0.5em;
+    box-sizing: border-box;
+}
+//-- Sprites
+.icon-close {
+    background-image   : url("../../dist/img/sprites/img.png");
+    background-position: -55px 0;
+    width              : 25px;
+    height             : 25px;
+    display            : block;
+}
+.icon-down {
+    background-image   : url("../../dist/img/sprites/img.png");
+    background-position: 0 0;
+    width              : 55px;
+    height             : 22px;
+    display            : block;
+}
+.icon-menu {
+    background-image   : url("../../dist/img/sprites/img.png");
+    background-position: 0 -22px;
+    width              : 40px;
+    height             : 23px;
+    display            : block;
+}
+.b-lazy {
+    transition: opacity 500ms ease-in-out;
+    max-width : 100%;
+    opacity   : 0;
+}
+.b-lazy.b-loaded {
+    opacity: 1;
+}
+.opener {
+    position     : fixed;
+    top          : 1.6em;
+    right        : 1.6em;
+    z-index      : 1000;
+    text-align   : center;
+    transform    : scale(0);
+    transition   : transform 0.4s ease;
+    text-align   : center;
+    background   : rgba(0,0,0,0.8);
+    border-radius: 4px;
+    padding      : 0.6em;
+    top          : 1.4em;
+    right        : 1.4em;
+    &.active {
+        transform: scale(1);
+    }
+    &.close {
+        width    : 4%;
+        max-width: 1.2em;
+        min-width: 1em;
+        padding  : 0.6em 1em 0.4em;
+    }
+    a {
+        padding        : 0;
+        z-index        : 1;
+        color          : $whiteFont;
+        text-transform : uppercase;
+        text-decoration: none;
+        width          : 25px;
+        img {
+            width: 100%;
+        }
+    }
+    #hamburger {
+        opacity   : 1;
+        transition: opacity 0.5s ease;
+    }
+}
+.gentleScroll {
+    background-color: rgba(0,0,0,0.5);
+    height          : 20px;
+    display         : inline-block;
+    transition      : transform 0.4s ease;
+    transform       : scale(0);
+    &:hover {
+        background: rgba(0,0,0,0.7);
+    }
+}
+.active .gentleScroll {
+    transform: scale(1);
+}
+.half {
+    display : block;
+    position: relative;
+    height  : 100%;
+    width   : 50%;
+}
+.left {
+    position  : absolute;
+    left      : 0;
+    top       : 0;
+    text-align: left;
+}
+.right {
+    position  : absolute;
+    right     : 0;
+    top       : 0;
+    text-align: left;
+}
+@media(max-width: 775px) {
+    .half {
+        width : 100%;
+        height: auto;
+    }
+    .left,
+    .right {
+        position: relative;
+        left    : 0;
+    }
+}
+nav#menu {
+    position  : fixed;
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+    opacity   : 0;
+    visibility: hidden;
+    width     : 100%;
+    height    : 100%;
+    background: rgba(0,0,0,0.9);
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index   : 1001;
+    &::before {
+        content   : ' ';
+        position  : absolute;
+        width     : 100%;
+        margin    : 0 auto;
+        left      : 0;
+        right     : 0;
+        top       : 35%;
+        background: $slightBackground;
+        height    : 30%;
+        transform : skewY(20deg);
+        z-index   : -2;
+    }
+    &.active {
+        visibility: visible;
+        opacity   : 1;
+    }
+    section {
+        position      : absolute;
+        margin        : 0 auto;
+        left          : 0;
+        right         : 0;
+        top           : 50%;
+        transform     : translateY(-50%);
+        width         : 98%;
+        max-width     : 400px;
+        background    : $darkBlue;
+        margin        : 0 auto;
+        padding       : 1em;
+        box-sizing    : border-box;
+        color         : $whiteFont;
+        text-transform: uppercase;
+        box-shadow    : 0 3px 5px 0 rgba(0,0,0,0.54);
+        text-align    : center;
+        z-index       : 9999;
+        a {
+            display        : block;
+            margin         : 1em auto;
+            text-decoration: none;
+            color          : $whiteFont;
+            font-size      : 1.4em;
+        }
+        .close a {
+            margin   : 0 auto;
+            padding  : 0;
+            font-size: 1em;
+        }
+    }
+}
+.circle {
+    position     : absolute;
+    overflow     : hidden;
+    border-radius: 50%;
+    margin       : auto;
+    top          : 0;
+    left         : 0;
+    bottom       : 0;
+    right        : 0;
+}
+.circle1 {
+    background-color         : #00BCD4;
+    transform                : skewX(0deg) scale(1.1,1.12) translateX(6px);
+    animation                : circle1AnimateIn 2s ease-out;
+    animation-iteration-count: 1;
+    opacity                  : 0.6;
+}
+.circle2 {
+    background-color         : #004D40;
+    opacity                  : 0.5;
+    transform                : skewX(0deg) scale(1.1,1.12) translateX(-9px);
+    animation                : circle2AnimateIn 2s ease-out;
+    animation-iteration-count: 1;
+}
+.circle3 {
+    background-color         : #FBC02D;
+    transform                : skewY(0.2deg) scale(0.95) translateY(-8px);
+    opacity                  : 0.7;
+    animation                : circle3AnimateIn 2s ease-out;
+    animation-iteration-count: 1;
+}
+.circle4 {
+    background-color         : #E0E0E0;
+    transform                : scale(0.95) skewY(1deg);
+    opacity                  : 0.6;
+    box-shadow               : 0 3px 5px 0 rgba(0,0,0,0.54);
+    animation                : circle4AnimateIn 2s ease-out;
+    animation-iteration-count: 1;
+}
+.active {
+    .circle1 {
+        animation: circle1ani 50s infinite ease-in-out;
+    }
+    .circle2 {
+        animation: circle2ani 20s infinite ease-in-out;
+    }
+    .circle3 {
+        animation: circle3ani 13s infinite ease-in-out;
+    }
+    .circle4 {
+        animation: circle4ani 35s infinite ease-in-out;
+    }
+}
+@keyframes circle1AnimateIn {
+    0% {
+        opacity  : 0;
+        transform: scale(9) translateX(-20px);
+    }
+    100% {
+        opacity  : 0.6;
+        transform: skewX(0deg) scale(1.1,1.12) translateX(6px);
+    }
+}
+@keyframes circle2AnimateIn {
+    0% {
+        opacity  : 0;
+        transform: scale(9) translateX(-20px);
+    }
+    20% {
+        opacity  : 0.1;
+        transform: scale(8) translateX(30px);
+    }
+    100% {
+        opacity  : 0.5;
+        transform: scale(1.1,1.12) translateX(-9px);
+    }
+}
+@keyframes circle3AnimateIn {
+    0% {
+        opacity  : 0;
+        transform: scale(7) translateY(20px);
+    }
+    40% {
+        opacity  : 0.6;
+        transform: scale(7) translateY(20px);
+    }
+    100% {
+        opacity  : 0.7;
+        transform: skewY(0.2deg) scale(0.95) translateY(-8px);
+    }
+}
+@keyframes circle4AnimateIn {
+    0% {
+        opacity  : 1;
+        transform: scale(5);
+    }
+    30% {
+        opacity  : 1;
+        transform: scale(5);
+    }
+    100% {
+        opacity  : 0.6;
+        transform: scale(0.95) skewY(1deg);
+    }
+}
+@keyframes circle1ani {
+    0% {
+        opacity  : 0.6;
+        transform: skewX(0deg) scale(1.1,1.12) translateX(6px);
+    }
+    20% {
+        opacity  : 0.5;
+        transform: skewX(2.5deg) scale(1.13,1.13) translateX(6px);
+    }
+    40% {
+        opacity  : 0.3;
+        transform: skewX(4deg) scale(1.16,1.17) translateX(8px);
+    }
+    60% {
+        opacity  : 0.6;
+        transform: skewX(6deg) scale(1.08,1.06) translateX(3px);
+    }
+    80% {
+        opacity  : 0.8;
+        transform: skewX(-2deg) scale(1.03,1) translateX(2px);
+    }
+    100% {
+        opacity  : 0.6;
+        transform: skewX(0deg) scale(1.1,1.12) translateX(6px);
+    }
+}
+@keyframes circle2ani {
+    0% {
+        opacity  : 0.5;
+        transform: skewX(0deg) scale(1.1,1.12) translateX(-9px);
+    }
+    20% {
+        opacity  : 0.6;
+        transform: skewX(2.5deg) scale(1.12,1.2) translateX(-10px);
+    }
+    40% {
+        opacity  : 0.3;
+        transform: skewX(4deg) scale(1.2,1.3) translateX(-14px);
+    }
+    60% {
+        opacity  : 0.4;
+        transform: skewX(6deg) scale(1,1.16) translateX(-9px);
+    }
+    80% {
+        opacity  : 0.6;
+        transform: skewX(-2deg) scale(1.1,1.1) translateX(-9px);
+    }
+    100% {
+        opacity  : 0.5;
+        transform: skewX(0deg) scale(1.1,1.12) translateX(-9px);
+    }
+}
+@keyframes circle3ani {
+    0% {
+        opacity  : 0.7;
+        transform: skewY(0.2deg) scale(0.95) translateY(-8px);
+    }
+    50% {
+        opacity  : 0.3;
+        transform: skewY(4deg) scale(1.04) translateY(-10px);
+    }
+    100% {
+        opacity  : 0.7;
+        transform: skewY(0.2deg) scale(0.95) translateY(-8px);
+    }
+}
+@keyframes circle4ani {
+    0% {
+        opacity  : 0.6;
+        transform: scale(0.95) skewY(1deg);
+    }
+    25% {
+        opacity  : 0.5;
+        transform: scale(0.93) skewY(1.8deg);
+    }
+    50% {
+        opacity  : 0.4;
+        transform: scale(0.95) skewY(2deg);
+    }
+    75% {
+        opacity  : 0.6;
+        transform: scale(1, 1.01) skewX(4deg);
+    }
+    100% {
+        opacity  : 0.6;
+        transform: scale(0.95) skewY(1deg);
+    }
+}
