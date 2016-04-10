@@ -1,6 +1,6 @@
 @import "components"; //-- Main
 body {
-    background-image: linear-gradient(to bottom right, #E0E0E0, #DCDCDC 40%, #9FB8C1);
+    background-image: linear-gradient(to bottom right, #E0E0E0, #DCDCDC 40%, #B2BDC1);
 }
 h1,
 h2,
@@ -58,7 +58,7 @@ section {
         font-size     : 3em;
         color         : #212121;
         font-family   : 'Libre Baskerville', serif, arial;
-        border-bottom : 1px solid #9FB8C1;
+        border-bottom : 1px solid #989898;
         @media(max-width: 500px) {
             font-size: 2.2em;
         }
@@ -87,6 +87,9 @@ footer {
         border-radius: 0.2em;
         display      : inline-block;
     }
+    p {
+        text-align: center;
+    }
     a {
         color: $whiteFont;
     }
@@ -97,7 +100,7 @@ article {
     margin        : 0 auto;
     padding-top   : 2em;
     padding-bottom: 3em;
-    width         : 99%;
+    width         : 100%;
     text-align    : center;
 }
 section#sectionCV {
@@ -129,7 +132,7 @@ section#sectionCV {
             display         : block;
             position        : relative;
             margin          : 0 auto 5em;
-            background-color: rgba(250,250,250,0.8);
+            background-color: rgba(250,250,250,0.9);
             padding         : 1.2em 0.8em 0.2em;
             border          : 1px solid #076A61;
             border-radius   : 0.5em;
@@ -322,4 +325,66 @@ section#sectionCV {
             clear  : both;
         }
     }
+}
+article.work {
+    display       : block;
+    position      : relative;
+    margin        : 5em auto;
+    overflow      : hidden;
+    padding-bottom: 1em;
+    background    : $whiteFont;
+    &::before {
+        content   : ' ';
+        position  : absolute;
+        width     : 110%;
+        margin    : 0 auto;
+        height    : 8em;
+        background: $darkBlue;
+        left      : -1em;
+        right     : -1em;
+        top       : -2.5em;
+        transform : rotate(2.5deg);
+        z-index   : 0;
+    }
+    &::after {
+        content   : ' ';
+        position  : absolute;
+        width     : 110%;
+        margin    : 0 auto;
+        height    : 8em;
+        background: $darkBlue;
+        left      : -1em;
+        right     : -1em;
+        bottom    : -3em;
+        transform : rotate(2.5deg);
+        z-index   : 1;
+    }
+    h3 {
+        font-family: 'Libre Baskerville', serif, arial;
+        color      : $whiteFont;
+        font-size  : 1.8em;
+        text-align : right;
+        margin     : 0 auto 1.6em;
+        z-index    : 2;
+    }
+    .description {
+        float         : right;
+        width         : 40%;
+        border-right  : 1px solid $darkBlue;
+        padding       : 0.4em 0.6em;
+        vertical-align: middle;
+        z-index       : 2;
+        margin-top    : 2em;
+    }
+    .browser {
+        float         : left;
+        max-height    : none;
+        width         : 50%;
+        vertical-align: top;
+        margin-top    : 0;
+        z-index       : 2;
+    }
+}
+aside.container {
+    max-width: 700px;
 }

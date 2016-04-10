@@ -162,8 +162,8 @@ section#first {
         font-size    : 1.6em;
         margin-bottom: 0.2em;
         overflow     : hidden;
-        max-width    : 0;
-        transition   : max-width 1s ease;
+        opacity      : 0;
+        transition   : opacity 0.5s;
     }
     h3 {
         a {
@@ -253,7 +253,7 @@ section#first {
             transform: translateX(0);
         }
         h3 {
-            max-width: 100%;
+            opacity: 1;
         }
     }
     .lightGreen {
@@ -302,139 +302,6 @@ section#first {
             right: 0;
             i {
                 transform: rotate(-90deg);
-            }
-        }
-        .browser {
-            display      : block;
-            position     : relative;
-            margin       : 3% auto;
-            max-height   : 55vh;
-            width        : 80%;
-            max-width    : 800px;
-            border       : 1px solid #B5B3B3;
-            box-shadow   : 0 2px 3px 0 $slightBackground;
-            border-radius: 3px;
-            overflow     : hidden;
-            transition   : transform 0.4s ease, opacity 0.4s ease;
-            opacity      : 1;
-            @media (max-width: 580px) {
-                border-radius: 10px;
-                max-width    : 12em;
-                max-height   : 20em;
-                height       : 20em;
-                margin       : 6% auto;
-            }
-            .screen {
-                background: #D0D0D0;
-                @media(max-width: 580px) {
-                    height: 90%;
-                }
-            }
-            .mobileBottom {
-                display   : none;
-                position  : relative;
-                width     : 100%;
-                height    : 10%;
-                background: #D0D0D0;
-                margin    : 0;
-                padding   : 5px 0;
-                box-sizing: border-box;
-                @media(max-width: 580px) {
-                    display: block;
-                }
-                .mobileButton {
-                    background   : #696969;
-                    height       : 20px;
-                    width        : 20px;
-                    border-radius: 10px;
-                    margin       : 0 auto;
-                }
-            }
-            img {
-                display: block;
-                margin : 10px auto 0;
-                width  : 100%;
-                @media (max-width: 580px) {
-                    width : 90%;
-                    border: 1px solid #8C8C8C;
-                }
-                &.mobile {
-                    display: none;
-                }
-                @media (max-width: 580px) {
-                    &.desktop {
-                        display: none;
-                    }
-                    &.mobile {
-                        display: block;
-                    }
-                }
-            }
-            .toolbar {
-                height          : 40px;
-                background-color: #D0D0D0;
-                @media (max-width: 580px) {
-                    height: 15px;
-                }
-            }
-            .speaker {
-                position     : absolute;
-                margin       : 0 auto;
-                width        : 40px;
-                height       : 4px;
-                background   : #696969;
-                border-radius: 4px;
-                top          : 12px;
-                right        : 0;
-                left         : 0;
-                margin       : 0 auto;
-                display      : none;
-                @media (max-width: 580px) {
-                    display: block;
-                }
-            }
-            .addressbar {
-                display         : inline-block;
-                background-color: #FAFAFA;
-                margin          : 20px 10px 0;
-                width           : 75%;
-                font-family     : arial;
-                border-radius   : 3px;
-                padding         : 4px;
-                font-size       : 0.8em;
-                color           : #212121;
-                a {
-                    color          : #212121;
-                    text-decoration: none;
-                }
-                @media (max-width: 580px) {
-                    display: none;
-                }
-            }
-            .browserButtons {
-                position: absolute;
-                top     : 0;
-                left    : 0;
-                padding : 1px 4px;
-                @media (max-width: 580px) {
-                    display: none;
-                }
-                .fakeButton {
-                    display      : inline-block;
-                    width        : 10px;
-                    height       : 10px;
-                    border-radius: 50%;
-                    margin       : 0 2px;
-                }
-                .closeButton {
-                    background-color: #E00000;
-                }
-                .minimiseButton {
-                    background-color: #E08800;
-                }
-                .maximiseButton {
-                    background-color: #4AE000;
-                }
             }
         }
     }

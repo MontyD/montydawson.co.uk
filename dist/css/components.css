@@ -15,6 +15,10 @@ h5 {
   font-weight: normal;
   color: #FAFAFA; }
 
+p {
+  line-height: 150%;
+  text-align: justify; }
+
 a {
   padding: 10px;
   border-radius: 4px;
@@ -63,7 +67,7 @@ button {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 0.5em;
+  padding: 0 0.8em;
   box-sizing: border-box; }
 
 .icon-close {
@@ -568,3 +572,121 @@ nav#menu {
     opacity: 0.6;
     -webkit-transform: scale(0.95) skewY(1deg);
             transform: scale(0.95) skewY(1deg); } }
+.browser {
+  display: block;
+  position: relative;
+  margin: 3% auto;
+  max-height: 55vh;
+  width: 80%;
+  max-width: 800px;
+  border: 1px solid #B5B3B3;
+  box-shadow: 0 2px 3px 0 rgba(224, 224, 224, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+  -webkit-transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
+  transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease, -webkit-transform 0.4s ease;
+  opacity: 1; }
+  @media (max-width: 580px) {
+    .browser {
+      border-radius: 10px;
+      max-width: 12em;
+      max-height: 20em;
+      height: 20em;
+      margin: 6% auto; } }
+  .browser .screen {
+    background: #D0D0D0; }
+    @media (max-width: 580px) {
+      .browser .screen {
+        height: 90%; } }
+  .browser .mobileBottom {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 10%;
+    background: #D0D0D0;
+    margin: 0;
+    padding: 5px 0;
+    box-sizing: border-box; }
+    @media (max-width: 580px) {
+      .browser .mobileBottom {
+        display: block; } }
+    .browser .mobileBottom .mobileButton {
+      background: #696969;
+      height: 20px;
+      width: 20px;
+      border-radius: 10px;
+      margin: 0 auto; }
+  .browser img {
+    display: block;
+    margin: 10px auto 0;
+    width: 100%; }
+    @media (max-width: 580px) {
+      .browser img {
+        width: 90%;
+        border: 1px solid #8C8C8C; } }
+    .browser img.mobile {
+      display: none; }
+    @media (max-width: 580px) {
+      .browser img.desktop {
+        display: none; }
+      .browser img.mobile {
+        display: block; } }
+  .browser .toolbar {
+    height: 40px;
+    background-color: #D0D0D0; }
+    @media (max-width: 580px) {
+      .browser .toolbar {
+        height: 15px; } }
+  .browser .speaker {
+    position: absolute;
+    margin: 0 auto;
+    width: 40px;
+    height: 4px;
+    background: #696969;
+    border-radius: 4px;
+    top: 12px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    display: none; }
+    @media (max-width: 580px) {
+      .browser .speaker {
+        display: block; } }
+  .browser .addressbar {
+    display: inline-block;
+    background-color: #FAFAFA;
+    margin: 20px 10px 0;
+    width: 75%;
+    font-family: arial;
+    border-radius: 3px;
+    padding: 4px;
+    font-size: 0.8em;
+    color: #212121; }
+    .browser .addressbar a {
+      color: #212121;
+      text-decoration: none; }
+    @media (max-width: 580px) {
+      .browser .addressbar {
+        display: none; } }
+  .browser .browserButtons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1px 4px; }
+    @media (max-width: 580px) {
+      .browser .browserButtons {
+        display: none; } }
+    .browser .browserButtons .fakeButton {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 2px; }
+    .browser .browserButtons .closeButton {
+      background-color: #E00000; }
+    .browser .browserButtons .minimiseButton {
+      background-color: #E08800; }
+    .browser .browserButtons .maximiseButton {
+      background-color: #4AE000; }
