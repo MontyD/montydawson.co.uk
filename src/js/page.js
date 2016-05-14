@@ -19,7 +19,7 @@
             if (callNow) func.apply(context, args);
         };
     }
-    if (Blazy) {
+    if (typeof Blazy !== "undefined") {
         var bLazy = new Blazy({
             offset: 100
         });

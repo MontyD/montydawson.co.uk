@@ -12,9 +12,9 @@ h5 {
 header {
     display            : block;
     position           : relative;
-    height             : 90px;
+    height             : 300px;
     line-height        : 90px;
-    background-image   : url('../img/header.jpg');
+    background-image   : url('../img/header.png');
     background-repeat  : no-repeat;
     background-size    : cover;
     background-repeat  : no-repeat;
@@ -69,7 +69,7 @@ footer {
     margin             : 5em auto 0;
     font-size          : 0.8em;
     text-align         : center;
-    background-image   : url('../img/header.jpg');
+    background-image   : url('../img/header.png');
     background-repeat  : no-repeat;
     background-size    : cover;
     background-repeat  : no-repeat;
@@ -108,8 +108,9 @@ section#sectionCV {
     padding   : 1em;
     box-sizing: border-box;
     border    : 1px solid #E0E0E0;
-    margin-top: 2em;
+    margin-top: -200px;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,0.4);
+    z-index: 10;
     .slightText {
         margin   : 0.4em auto;
         max-width: 700px;
@@ -141,6 +142,11 @@ section#sectionCV {
             width           : 100%;
             max-width       : 800px;
             font-size       : 0.9em;
+            &:hover {
+                .circleContainer {
+                    transform: translateY(-50%) scale(1.2);
+                }
+            }
             &::before {
                 bottom          : -2em;
                 left            : 50%;
@@ -153,17 +159,18 @@ section#sectionCV {
                 background-color: #076A61;
             }
             .circleContainer {
-                position : absolute;
-                top      : 50%;
-                transform: translateY(-50%);
-                display  : block;
-                display  : block;
-                height   : 175%;
-                width    : 90%;
-                left     : 0;
-                z-index  : -1;
-                right    : 0;
-                margin   : auto;
+                position  : absolute;
+                top       : 50%;
+                transform : translateY(-50%);
+                display   : block;
+                display   : block;
+                height    : 175%;
+                width     : 90%;
+                left      : 0;
+                z-index   : -1;
+                right     : 0;
+                margin    : auto;
+                transition: transform 0.3s ease;
                 @media(max-width: 610px) {
                     display: none;
                 }
@@ -320,10 +327,6 @@ section#sectionCV {
                 }
             }
         }
-        .clear {
-            display: block;
-            clear  : both;
-        }
     }
 }
 article.work {
@@ -331,15 +334,17 @@ article.work {
     position      : relative;
     margin        : 5em auto;
     overflow      : hidden;
-    padding-bottom: 1em;
-    background    : $whiteFont;
+    padding-bottom: 4em;
+    background    : $darkBlue;
+    border-top    : 1px solid #AFAFAF;
+    &::after,
     &::before {
         content   : ' ';
         position  : absolute;
         width     : 110%;
         margin    : 0 auto;
         height    : 8em;
-        background: $darkBlue;
+        background: #f1f1f1;
         left      : -1em;
         right     : -1em;
         top       : -2.5em;
@@ -347,41 +352,36 @@ article.work {
         z-index   : 0;
     }
     &::after {
-        content   : ' ';
-        position  : absolute;
-        width     : 110%;
-        margin    : 0 auto;
-        height    : 8em;
-        background: $darkBlue;
-        left      : -1em;
-        right     : -1em;
-        bottom    : -3em;
-        transform : rotate(2.5deg);
-        z-index   : 1;
+        top    : auto;
+        bottom : -3em;
+        z-index: 1;
     }
     h3 {
         font-family: 'Libre Baskerville', serif, arial;
-        color      : $whiteFont;
+        color      : $darkBlue;
         font-size  : 1.8em;
         text-align : right;
         margin     : 0 auto 1.6em;
         z-index    : 2;
     }
     .description {
-        float         : right;
+        display       : inline-block;
+        margin-left   : 7%;
+        margin-bottom : 3%;
         width         : 40%;
-        border-right  : 1px solid $darkBlue;
-        padding       : 0.4em 0.6em;
+        border-right  : 1px solid $whiteFont;
         vertical-align: middle;
         z-index       : 2;
-        margin-top    : 2em;
+        color         : $whiteFont;
+        font-size     : 0.9em;
+        padding       : 0.5em 1em 1em;
     }
     .browser {
-        float         : left;
+        display       : inline-block;
         max-height    : none;
-        width         : 50%;
-        vertical-align: top;
-        margin-top    : 0;
+        width         : 49%;
+        vertical-align: middle;
+        margin        : 0;
         z-index       : 2;
     }
 }

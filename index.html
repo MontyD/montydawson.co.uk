@@ -30,7 +30,7 @@
   <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#3E4F69">
   <meta name="msapplication-TileColor" content="#3E4F69">
   <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="dist/css/landing.min.css">
   <title>Monty Dawson | Web developer</title>
@@ -74,7 +74,7 @@
     <div class="half right lightGreen">
       <div id="skills" class="overlay">
         <div class="skillsGroup expand" id="confident">
-          <h3><a href="#confident" title="Interested in" class="fixedWidth skillsHeader">I'm confident in<i class="icon icon-down"></i></a></h3>
+          <h3><a href="#confident" title="I'm confident with" class="fixedWidth skillsHeader">I'm confident with:<i class="icon icon-down"></i></a></h3>
           <ul>
             <li>Javascript</li>
             <li>CSS / SCSS</li>
@@ -83,22 +83,22 @@
             <li>MongoDB</li>
             <li>Git</li>
             <li>Grunt</li>
+            <li>Linux</li>
+            <li>IIS</li>
           </ul>
         </div>
         <div class="skillsGroup" id="learning">
-          <h3><a href="#learning" title="Interested in" class="fixedWidth skillsHeader">I'm learning<i class="icon icon-down"></i></a></h3>
+          <h3><a href="#learning" title="I'm familiar with<" class="fixedWidth skillsHeader">I'm familiar with:<i class="icon icon-down"></i></a></h3>
           <ul>
+            <li>AngularJS</li>
             <li>PHP</li>
             <li>SQL</li>
-            <li>Photoshop</li>
-            <li>Inkscape</li>
+            <li>Ruby on Rails</li>
           </ul>
         </div>
         <div class="skillsGroup" id="interested">
-          <h3><a href="#interested" title="Interested in" class="fixedWidth skillsHeader">I'm interested in<i class="icon icon-down"></i></a></h3>
+          <h3><a href="#interested" title="Interested in" class="fixedWidth skillsHeader">I'm interested in:<i class="icon icon-down"></i></a></h3>
           <ul>
-            <li>AngularJS</li>
-            <li>Ruby on Rails</li>
             <li>Illustrator</li>
             <li>Getting better at all of the above</li>
           </ul>
@@ -114,7 +114,8 @@
       <h2><span class="fixedWidth">Things I've made</span></h2>
       <a href="#previousProject" title="Previous" id="previousProject"><i class="icon icon-down previous"></i></a>
       <a href="#nextProject" title="Next" id="nextProject"><i class="icon icon-down next"></i></a>
-      <div id="exampleProject" class="browser">
+      <!-- Hidden project left -->
+      <div class="browser leftPreview">
         <div class="screen">
           <div class="toolbar">
             <div class="browserButtons">
@@ -123,12 +124,54 @@
               <div class="maximiseButton fakeButton"></div>
             </div>
             <div class="addressbar">
-              <a href="https://thewellhopton.org.uk/" id="addressBar" title="The Well">thewellhopton.org.uk</a>
+              <a class="addressLink" href=" " title=" "> </a>
+            </div>
+            <div class="speaker"></div>
+          </div>
+          <img class="desktop" data-src="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=" " />
+          <img class="mobile" data-src="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=" " />
+        </div>
+        <div class="mobileBottom">
+          <div class="mobileButton"></div>
+        </div>
+      </div>
+      <!-- Active project center -->
+      <div id="exampleProject" class="browser current">
+        <div class="screen">
+          <div class="toolbar">
+            <div class="browserButtons">
+              <div class="closeButton fakeButton"></div>
+              <div class="minimiseButton fakeButton"></div>
+              <div class="maximiseButton fakeButton"></div>
+            </div>
+            <div class="addressbar">
+              <a class="addressLink" href="https://thewellhopton.org.uk/" title="The Well">thewellhopton.org.uk</a>
             </div>
             <div class="speaker"></div>
           </div>
           <img class="b-lazy desktop" id="desktopImage" data-src="./dist/img/well.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The Well" />
           <img class="b-lazy mobile" id="mobileImage" data-src="./dist/img/well-mobile.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The Well" />
+        </div>
+        <div class="mobileBottom">
+          <div class="mobileButton"></div>
+        </div>
+      </div>
+      <!-- Hidden project right -->
+      <div class="browser rightPreview">
+        <div class="screen">
+          <div class="toolbar">
+            <div class="browserButtons">
+              <div class="closeButton fakeButton"></div>
+              <div class="minimiseButton fakeButton"></div>
+              <div class="maximiseButton fakeButton"></div>
+            </div>
+            <div class="addressbar">
+              <a class="addressLink" href=" " title=" "> </a>
+            </div>
+            <div class="speaker"></div>
+          </div>
+          <img class="desktop" data-src="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=" " />
+          <img class="mobile" data-src="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=" " />
         </div>
         <div class="mobileBottom">
           <div class="mobileButton"></div>

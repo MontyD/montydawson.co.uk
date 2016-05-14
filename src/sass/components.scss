@@ -13,7 +13,8 @@ body {
     margin     : 0;
     padding    : 0;
     height     : 100%;
-    font-family: 'Raleway', Helvetica, sans-serif, arial;
+    font-family: 'Open Sans', Helvetica, sans-serif, arial;
+    font-weight: 400 !important;
     overflow-x : hidden;
     background : rgba(230,230,230,0.3);
     color      : #212121;
@@ -111,27 +112,24 @@ button {
     opacity: 1;
 }
 .opener {
-    position     : fixed;
-    top          : 1.6em;
-    right        : 1.6em;
-    z-index      : 1000;
-    text-align   : center;
-    transform    : scale(0);
-    transition   : transform 0.4s ease;
-    text-align   : center;
-    background   : rgba(0,0,0,0.8);
-    border-radius: 4px;
-    padding      : 0.6em;
-    top          : 1.4em;
-    right        : 1.4em;
-    &.active {
-        transform: scale(1);
-    }
+    position                 : fixed;
+    top                      : 1.6em;
+    right                    : 1.6em;
+    z-index                  : 1000;
+    text-align               : center;
+    transition               : transform 0.4s ease;
+    text-align               : center;
+    background               : rgba(0,0,0,0.8);
+    border-radius            : 4px;
+    padding                  : 0.6em;
+    top                      : 1.4em;
+    right                    : 1.4em;
+    animation-name           : open;
+    animation-duration       : 3s;
+    animation-iteration-count: 1;
     &.close {
-        width    : 4%;
-        max-width: 1.2em;
-        min-width: 1em;
-        padding  : 0.6em 1em 0.4em;
+        width    : 2.7em;
+        box-sizing: border-box;
     }
     a {
         padding        : 0;
@@ -150,17 +148,16 @@ button {
     }
 }
 .gentleScroll {
-    background-color: rgba(0,0,0,0.5);
-    height          : 20px;
-    display         : inline-block;
-    transition      : transform 0.4s ease;
-    transform       : scale(0);
+    background-color         : rgba(0,0,0,0.5);
+    height                   : 20px;
+    display                  : inline-block;
+    transition               : transform 0.4s ease;
+    animation-name           : open;
+    animation-duration       : 3s;
+    animation-iteration-count: 1;
     &:hover {
         background: rgba(0,0,0,0.7);
     }
-}
-.active .gentleScroll {
-    transform: scale(1);
 }
 .half {
     display : block;
@@ -179,6 +176,10 @@ button {
     right     : 0;
     top       : 0;
     text-align: left;
+}
+.clear {
+    display: block;
+    clear  : both;
 }
 @media(max-width: 775px) {
     .half {
@@ -249,6 +250,138 @@ nav#menu {
             margin   : 0 auto;
             padding  : 0;
             font-size: 1em;
+        }
+    }
+}
+.browser {
+    display      : block;
+    position     : relative;
+    margin       : 3% auto;
+    max-height   : 55vh;
+    width        : 80%;
+    max-width    : 800px;
+    border       : 1px solid #B5B3B3;
+    box-shadow   : 0 2px 3px 0 $slightBackground;
+    border-radius: 3px;
+    overflow     : hidden;
+    opacity      : 1;
+    @media (max-width: 580px) {
+        border-radius: 10px;
+        max-width    : 12em;
+        max-height   : 20em;
+        height       : 20em;
+        margin       : 6% auto;
+    }
+    .screen {
+        background: #D0D0D0;
+        @media(max-width: 580px) {
+            height: 90%;
+        }
+    }
+    .mobileBottom {
+        display   : none;
+        position  : relative;
+        width     : 100%;
+        height    : 10%;
+        background: #D0D0D0;
+        margin    : 0;
+        padding   : 5px 0;
+        box-sizing: border-box;
+        @media(max-width: 580px) {
+            display: block;
+        }
+        .mobileButton {
+            background   : #696969;
+            height       : 20px;
+            width        : 20px;
+            border-radius: 10px;
+            margin       : 0 auto;
+        }
+    }
+    img {
+        display: block;
+        margin : 10px auto 0;
+        width  : 100%;
+        @media (max-width: 580px) {
+            width : 90%;
+            border: 1px solid #8C8C8C;
+        }
+        &.mobile {
+            display: none;
+        }
+        @media (max-width: 580px) {
+            &.desktop {
+                display: none;
+            }
+            &.mobile {
+                display: block;
+            }
+        }
+    }
+    .toolbar {
+        height          : 40px;
+        background-color: #D0D0D0;
+        @media (max-width: 580px) {
+            height: 15px;
+        }
+    }
+    .speaker {
+        position     : absolute;
+        margin       : 0 auto;
+        width        : 40px;
+        height       : 4px;
+        background   : #696969;
+        border-radius: 4px;
+        top          : 12px;
+        right        : 0;
+        left         : 0;
+        margin       : 0 auto;
+        display      : none;
+        @media (max-width: 580px) {
+            display: block;
+        }
+    }
+    .addressbar {
+        display         : inline-block;
+        background-color: #FAFAFA;
+        margin          : 20px 10px 0;
+        width           : 75%;
+        font-family     : arial;
+        border-radius   : 3px;
+        padding         : 4px;
+        font-size       : 0.8em;
+        color           : #212121;
+        a {
+            color          : #212121;
+            text-decoration: none;
+        }
+        @media (max-width: 580px) {
+            display: none;
+        }
+    }
+    .browserButtons {
+        position: absolute;
+        top     : 0;
+        left    : 0;
+        padding : 1px 4px;
+        @media (max-width: 580px) {
+            display: none;
+        }
+        .fakeButton {
+            display      : inline-block;
+            width        : 10px;
+            height       : 10px;
+            border-radius: 50%;
+            margin       : 0 2px;
+        }
+        .closeButton {
+            background-color: #E00000;
+        }
+        .minimiseButton {
+            background-color: #E08800;
+        }
+        .maximiseButton {
+            background-color: #4AE000;
         }
     }
 }
@@ -445,136 +578,17 @@ nav#menu {
         transform: scale(0.95) skewY(1deg);
     }
 }
-.browser {
-    display      : block;
-    position     : relative;
-    margin       : 3% auto;
-    max-height   : 55vh;
-    width        : 80%;
-    max-width    : 800px;
-    border       : 1px solid #B5B3B3;
-    box-shadow   : 0 2px 3px 0 $slightBackground;
-    border-radius: 3px;
-    overflow     : hidden;
-    transition   : transform 0.4s ease, opacity 0.4s ease;
-    opacity      : 1;
-    @media (max-width: 580px) {
-        border-radius: 10px;
-        max-width    : 12em;
-        max-height   : 20em;
-        height       : 20em;
-        margin       : 6% auto;
+@keyframes open {
+    0% {
+        opacity  : 0;
+        transform: scale(0);
     }
-    .screen {
-        background: #D0D0D0;
-        @media(max-width: 580px) {
-            height: 90%;
-        }
+    90% {
+        opacity  : 0;
+        transform: scale(0);
     }
-    .mobileBottom {
-        display   : none;
-        position  : relative;
-        width     : 100%;
-        height    : 10%;
-        background: #D0D0D0;
-        margin    : 0;
-        padding   : 5px 0;
-        box-sizing: border-box;
-        @media(max-width: 580px) {
-            display: block;
-        }
-        .mobileButton {
-            background   : #696969;
-            height       : 20px;
-            width        : 20px;
-            border-radius: 10px;
-            margin       : 0 auto;
-        }
-    }
-    img {
-        display: block;
-        margin : 10px auto 0;
-        width  : 100%;
-        @media (max-width: 580px) {
-            width : 90%;
-            border: 1px solid #8C8C8C;
-        }
-        &.mobile {
-            display: none;
-        }
-        @media (max-width: 580px) {
-            &.desktop {
-                display: none;
-            }
-            &.mobile {
-                display: block;
-            }
-        }
-    }
-    .toolbar {
-        height          : 40px;
-        background-color: #D0D0D0;
-        @media (max-width: 580px) {
-            height: 15px;
-        }
-    }
-    .speaker {
-        position     : absolute;
-        margin       : 0 auto;
-        width        : 40px;
-        height       : 4px;
-        background   : #696969;
-        border-radius: 4px;
-        top          : 12px;
-        right        : 0;
-        left         : 0;
-        margin       : 0 auto;
-        display      : none;
-        @media (max-width: 580px) {
-            display: block;
-        }
-    }
-    .addressbar {
-        display         : inline-block;
-        background-color: #FAFAFA;
-        margin          : 20px 10px 0;
-        width           : 75%;
-        font-family     : arial;
-        border-radius   : 3px;
-        padding         : 4px;
-        font-size       : 0.8em;
-        color           : #212121;
-        a {
-            color          : #212121;
-            text-decoration: none;
-        }
-        @media (max-width: 580px) {
-            display: none;
-        }
-    }
-    .browserButtons {
-        position: absolute;
-        top     : 0;
-        left    : 0;
-        padding : 1px 4px;
-        @media (max-width: 580px) {
-            display: none;
-        }
-        .fakeButton {
-            display      : inline-block;
-            width        : 10px;
-            height       : 10px;
-            border-radius: 50%;
-            margin       : 0 2px;
-        }
-        .closeButton {
-            background-color: #E00000;
-        }
-        .minimiseButton {
-            background-color: #E08800;
-        }
-        .maximiseButton {
-            background-color: #4AE000;
-        }
+    100% {
+        opacity  : 1;
+        transform: scale(1);
     }
 }

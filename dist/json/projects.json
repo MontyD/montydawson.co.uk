@@ -6,14 +6,14 @@
       "mobileImage": "well-mobile.png",
       "description": "A responsive website designed for The Well Coffee Shop. HTML5, CSS3 and JavaScript designed from scratch, and hooked up to the PHP CMS, SilverStripe. Version control using git and github, and deployed to AWS.",
       "siteLink": "https://www.thewellhopton.org.uk/",
-      "moreInfo": "work/#thewell"
+      "moreInfo": "./work.html#thewell"
     },
     {
       "title": "Slack Quiz Integration",
       "desktopImage": "slackquiz.png",
       "mobileImage": "slackquiz-mobile.png",
       "description": "A fun personal project that helped develop my backend skills. A quiz integration for Slack Teams that allows you to answer questions in slack and submit new questions and view stats using a small web app. Written in NodeJS and deployed to heroku.",
-      "moreInfo": "work/#slackquiz"
+      "moreInfo": "./work.html#slackquiz"
     }
   ]
 }
