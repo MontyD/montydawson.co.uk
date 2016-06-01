@@ -69,7 +69,7 @@ section#first {
         h1 {
             margin     : 0;
             font-size  : 9vw;
-            font-family: 'Libre Baskerville', serif, arial;
+            font-family: 'butlerbold', serif, arial;
             @media (max-width: 700px) {
                 font-size: 4em;
             }
@@ -140,7 +140,7 @@ section#first {
 }
 #second {
     background-color: $dark;
-    font-family     : 'Libre Baskerville', serif, arial;
+    font-family     : 'butlerbold', serif, arial;
     text-align      : center;
     color           : $whiteFont;
     #aboutMe {
@@ -417,7 +417,7 @@ section#fourth {
             margin-top : 0;
             font-size  : 2.5em;
             color      : $dark;
-            font-family: 'Libre Baskerville', serif, arial;
+            font-family: 'butlerbold', serif, arial;
             padding    : 0 0.5em;
             @media(min-width: 1000px) {
                 font-size: 4em;

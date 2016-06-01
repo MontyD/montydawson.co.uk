@@ -744,7 +744,7 @@ header {
     header .container h1 {
       margin: 0;
       font-size: 2.5em;
-      font-family: 'Libre Baskerville', serif, arial;
+      font-family: 'butlerbold', serif, arial;
       color: #FAFAFA;
       background: rgba(0, 0, 0, 0.6);
       padding: 0.5em;
@@ -772,7 +772,7 @@ section h2 {
   text-align: center;
   font-size: 3em;
   color: #212121;
-  font-family: 'Libre Baskerville', serif, arial;
+  font-family: 'butlerbold', serif, arial;
   border-bottom: 1px solid #989898; }
   @media (max-width: 500px) {
     section h2 {
@@ -794,7 +794,7 @@ footer {
   footer h3 {
     margin: 0;
     font-size: 2em;
-    font-family: 'Libre Baskerville', serif, arial;
+    font-family: 'butlerbold', serif, arial;
     color: #FAFAFA;
     background: rgba(0, 0, 0, 0.6);
     padding: 0.5em;
@@ -897,7 +897,7 @@ section#sectionCV {
           margin: auto; }
       section#sectionCV article#mainCV .event h3 {
         color: #212121;
-        font-family: 'Libre Baskerville', serif, arial;
+        font-family: 'butlerbold', serif, arial;
         font-size: 1.6em;
         margin-top: 0;
         margin-bottom: 0.4em; }
@@ -1029,7 +1029,7 @@ article.work {
     bottom: -3em;
     z-index: 1; }
   article.work h3 {
-    font-family: 'Libre Baskerville', serif, arial;
+    font-family: 'butlerbold', serif, arial;
     color: #3E4F69;
     font-size: 1.8em;
     text-align: right;

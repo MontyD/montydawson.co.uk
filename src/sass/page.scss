@@ -25,7 +25,7 @@ header {
         h1 {
             margin        : 0;
             font-size     : 2.5em;
-            font-family   : 'Libre Baskerville', serif, arial;
+            font-family   : 'butlerbold', serif, arial;
             color         : $whiteFont;
             background    : rgba(0,0,0,0.6);
             padding       : 0.5em;
@@ -57,7 +57,7 @@ section {
         text-align    : center;
         font-size     : 3em;
         color         : #212121;
-        font-family   : 'Libre Baskerville', serif, arial;
+        font-family   : 'butlerbold', serif, arial;
         border-bottom : 1px solid #989898;
         @media(max-width: 500px) {
             font-size: 2.2em;
@@ -80,7 +80,7 @@ footer {
     h3 {
         margin       : 0;
         font-size    : 2em;
-        font-family  : 'Libre Baskerville', serif, arial;
+        font-family  : 'butlerbold', serif, arial;
         color        : $whiteFont;
         background   : rgba(0,0,0,0.6);
         padding      : 0.5em;
@@ -189,7 +189,7 @@ section#sectionCV {
             }
             h3 {
                 color        : #212121;
-                font-family  : 'Libre Baskerville', serif, arial;
+                font-family  : 'butlerbold', serif, arial;
                 font-size    : 1.6em;
                 margin-top   : 0;
                 margin-bottom: 0.4em;
@@ -357,7 +357,7 @@ article.work {
         z-index: 1;
     }
     h3 {
-        font-family: 'Libre Baskerville', serif, arial;
+        font-family: 'butlerbold', serif, arial;
         color      : $darkBlue;
         font-size  : 1.8em;
         text-align : right;
