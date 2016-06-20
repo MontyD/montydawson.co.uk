@@ -25,7 +25,7 @@ header {
         h1 {
             margin        : 0;
             font-size     : 2.5em;
-            font-family   : 'butlerbold', serif, arial;
+            font-family   : 'Libre Baskerville', serif;
             color         : $whiteFont;
             background    : rgba(0,0,0,0.6);
             padding       : 0.5em;
@@ -57,7 +57,7 @@ section {
         text-align    : center;
         font-size     : 3em;
         color         : #212121;
-        font-family   : 'butlerbold', serif, arial;
+        font-family   : 'Libre Baskerville', serif;
         border-bottom : 1px solid #989898;
         @media(max-width: 500px) {
             font-size: 2.2em;
@@ -80,7 +80,7 @@ footer {
     h3 {
         margin       : 0;
         font-size    : 2em;
-        font-family  : 'butlerbold', serif, arial;
+        font-family  : 'Libre Baskerville', serif;
         color        : $whiteFont;
         background   : rgba(0,0,0,0.6);
         padding      : 0.5em;
@@ -104,13 +104,7 @@ article {
     text-align    : center;
 }
 section#sectionCV {
-    background: $whiteFont;
-    padding   : 1em;
-    box-sizing: border-box;
-    border    : 1px solid #E0E0E0;
-    margin-top: -200px;
-    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.4);
-    z-index: 10;
+  @extend .page;
     .slightText {
         margin   : 0.4em auto;
         max-width: 700px;
@@ -125,7 +119,7 @@ section#sectionCV {
             right           : 0;
             left            : 0;
             margin          : 0 auto;
-            width           : 0.2em;
+            width           : 1px;
             height          : 100%;
             background-color: $darkColor;
         }
@@ -144,7 +138,7 @@ section#sectionCV {
             font-size       : 0.9em;
             &:hover {
                 .circleContainer {
-                    transform: translateY(-50%) scale(1.2);
+                    transform: translateY(-50%) scale(1.05);
                 }
             }
             &::before {
@@ -189,7 +183,7 @@ section#sectionCV {
             }
             h3 {
                 color        : #212121;
-                font-family  : 'butlerbold', serif, arial;
+                font-family  : 'Libre Baskerville', serif;
                 font-size    : 1.6em;
                 margin-top   : 0;
                 margin-bottom: 0.4em;
@@ -357,7 +351,7 @@ article.work {
         z-index: 1;
     }
     h3 {
-        font-family: 'butlerbold', serif, arial;
+        font-family: 'Libre Baskerville', serif;
         color      : $darkBlue;
         font-size  : 1.8em;
         text-align : right;

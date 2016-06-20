@@ -6,7 +6,8 @@ body {
   font-weight: 400 !important;
   overflow-x: hidden;
   background: rgba(230, 230, 230, 0.3);
-  color: #212121; }
+  color: #212121;
+  -webkit-font-smoothing: antialiased; }
 
 h1,
 h2,
@@ -15,6 +16,16 @@ h4,
 h5 {
   font-weight: normal;
   color: #FAFAFA; }
+
+.page {
+  background: #FAFAFA;
+  padding: 1em;
+  box-sizing: border-box;
+  border: 1px solid #E0E0E0;
+  margin-top: -200px;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+  border-radius: 0.3em; }
 
 p {
   line-height: 150%;
@@ -116,13 +127,7 @@ button {
   border-radius: 4px;
   padding: 0.6em;
   top: 1.4em;
-  right: 1.4em;
-  -webkit-animation-name: open;
-          animation-name: open;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1; }
+  right: 1.4em; }
   .opener.close {
     width: 2.7em;
     box-sizing: border-box; }
@@ -139,6 +144,14 @@ button {
     opacity: 1;
     -webkit-transition: opacity 0.5s ease;
     transition: opacity 0.5s ease; }
+
+.home .opener {
+  -webkit-animation-name: open;
+          animation-name: open;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1; }
 
 .gentleScroll {
   background-color: rgba(0, 0, 0, 0.5);

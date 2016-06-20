@@ -237,7 +237,7 @@
 
         init: function() {
 
-            this.element.className = '';
+            this.element.className = this.element.className.replace('noJS ', '');
 
             var that = this;
 
