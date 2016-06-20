@@ -19,7 +19,7 @@ header {
     background-size    : cover;
     background-repeat  : no-repeat;
     background-position: center center;
-    z-index            : 10;
+    z-index            : 9;
     .container {
         height: 100%;
         h1 {
@@ -104,7 +104,8 @@ article {
     text-align    : center;
 }
 section#sectionCV {
-  @extend .page;
+    @extend .page;
+    width: 95%;
     .slightText {
         margin   : 0.4em auto;
         max-width: 700px;
@@ -323,39 +324,38 @@ section#sectionCV {
         }
     }
 }
+section#work {
+    @extend .page;
+    width        : 95%;
+    padding-left : 0;
+    padding-right: 0;
+}
 article.work {
-    display       : block;
-    position      : relative;
-    margin        : 5em auto;
-    overflow      : hidden;
-    padding-bottom: 4em;
-    background    : $darkBlue;
-    border-top    : 1px solid #AFAFAF;
-    &::after,
+    display   : block;
+    position  : relative;
+    margin    : 0 auto;
+    overflow  : hidden;
+    width     : 100%;
+    padding   : 7em 0.8em;
+    box-sizing: border-box;
     &::before {
-        content   : ' ';
-        position  : absolute;
-        width     : 110%;
-        margin    : 0 auto;
-        height    : 8em;
-        background: #f1f1f1;
-        left      : -1em;
-        right     : -1em;
-        top       : -2.5em;
-        transform : rotate(2.5deg);
-        z-index   : 0;
-    }
-    &::after {
-        top    : auto;
-        bottom : -3em;
-        z-index: 1;
+        content         : ' ';
+        position        : absolute;
+        left            : -1em;
+        top             : 4em;
+        height          : 84%;
+        width           : 110%;
+        opacity         : 0.2;
+        background-image: linear-gradient(to bottom right,#ffffff,#042275);
+        transform       : rotate(2deg);
+        z-index         : -1;
     }
     h3 {
         font-family: 'Libre Baskerville', serif;
         color      : $darkBlue;
         font-size  : 1.8em;
         text-align : right;
-        margin     : 0 auto 1.6em;
+        margin     : 0 auto 0.2em;
         z-index    : 2;
     }
     .description {
@@ -363,10 +363,10 @@ article.work {
         margin-left   : 7%;
         margin-bottom : 3%;
         width         : 40%;
-        border-right  : 1px solid $whiteFont;
+        border-right  : 1px solid $darkBlue;
         vertical-align: middle;
         z-index       : 2;
-        color         : $whiteFont;
+        color         : $darkBlue;
         font-size     : 0.9em;
         padding       : 0.5em 1em 1em;
     }

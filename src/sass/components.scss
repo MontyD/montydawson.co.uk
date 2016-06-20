@@ -10,14 +10,14 @@ $darkBlue: #3E4F69;
 $slightBackground: rgba(224, 224, 224, 0.2);
 $documentWidth: 1200px;
 body {
-    margin     : 0;
-    padding    : 0;
-    height     : 100%;
-    font-family: 'Open Sans', Helvetica, sans-serif, arial;
-    font-weight: 400 !important;
-    overflow-x : hidden;
-    background : rgba(230,230,230,0.3);
-    color      : #212121;
+    margin                : 0;
+    padding               : 0;
+    height                : 100%;
+    font-family           : 'Open Sans', Helvetica, sans-serif, arial;
+    font-weight           : 400 !important;
+    overflow-x            : hidden;
+    background            : rgba(230,230,230,0.3);
+    color                 : #212121;
     -webkit-font-smoothing: antialiased;
 }
 h1,
@@ -29,14 +29,13 @@ h5 {
     color      : $whiteFont;
 }
 .page {
-  background: $whiteFont;
-  padding   : 1em;
-  box-sizing: border-box;
-  border    : 1px solid #E0E0E0;
-  margin-top: -200px;
-  box-shadow: 0 1.5px 4px rgba(0,0,0,.24),0 1.5px 6px rgba(0,0,0,.12);
-  z-index: 10;
-  border-radius: 0.3em;
+    background   : $whiteFont;
+    padding      : 1em;
+    box-sizing   : border-box;
+    margin-top   : -200px;
+    box-shadow   : 0 1.5px 4px rgba(0,0,0,.24),0 1.5px 6px rgba(0,0,0,.12);
+    z-index      : 10;
+    border-radius: 0.3em;
 }
 p {
     line-height: 150%;
@@ -60,7 +59,6 @@ button {
     background     : transparent;
     transition     : background 0.3s ease, color 0.3s ease;
 }
-
 .innerText {
     max-width : 700px;
     margin    : 0.5em auto;
@@ -124,20 +122,20 @@ button {
     opacity: 1;
 }
 .opener {
-    position                 : fixed;
-    top                      : 1.6em;
-    right                    : 1.6em;
-    z-index                  : 1000;
-    text-align               : center;
-    transition               : transform 0.4s ease;
-    text-align               : center;
-    background               : rgba(0,0,0,0.8);
-    border-radius            : 4px;
-    padding                  : 0.6em;
-    top                      : 1.4em;
-    right                    : 1.4em;
+    position     : fixed;
+    top          : 1.6em;
+    right        : 1.6em;
+    z-index      : 1000;
+    text-align   : center;
+    transition   : transform 0.4s ease;
+    text-align   : center;
+    background   : rgba(0,0,0,0.8);
+    border-radius: 4px;
+    padding      : 0.6em;
+    top          : 1.4em;
+    right        : 1.4em;
     &.close {
-        width    : 2.7em;
+        width     : 2.7em;
         box-sizing: border-box;
     }
     a {
@@ -157,9 +155,9 @@ button {
     }
 }
 .home .opener {
-  animation-name           : open;
-  animation-duration       : 3s;
-  animation-iteration-count: 1;
+    animation-name           : open;
+    animation-duration       : 3s;
+    animation-iteration-count: 1;
 }
 .gentleScroll {
     background-color         : rgba(0,0,0,0.5);
