@@ -334,9 +334,9 @@ article.work {
     display   : block;
     position  : relative;
     margin    : 0 auto;
-    overflow  : hidden;
+    overflow-x: hidden;
     width     : 100%;
-    padding   : 7em 0.8em;
+    padding   : 7em 1.5em;
     box-sizing: border-box;
     &::before {
         content         : ' ';
@@ -345,38 +345,58 @@ article.work {
         top             : 4em;
         height          : 84%;
         width           : 110%;
-        opacity         : 0.2;
+        opacity         : 0.3;
         background-image: linear-gradient(to bottom right,#ffffff,#042275);
+        border          : 1px solid $whiteFont;
         transform       : rotate(2deg);
         z-index         : -1;
+    }
+    .floatInfo {
+      float: right;
+      width: 49%;
     }
     h3 {
         font-family: 'Libre Baskerville', serif;
         color      : $darkBlue;
+        padding    : 0.5em 0 0.5em 0.5em;
         font-size  : 1.8em;
-        text-align : right;
         margin     : 0 auto 0.2em;
         z-index    : 2;
+        text-align : right;
     }
-    .description {
-        display       : inline-block;
-        margin-left   : 7%;
-        margin-bottom : 3%;
-        width         : 40%;
-        border-right  : 1px solid $darkBlue;
-        vertical-align: middle;
-        z-index       : 2;
-        color         : $darkBlue;
-        font-size     : 0.9em;
-        padding       : 0.5em 1em 1em;
+    p {
+        margin-bottom: 1%;
+        z-index      : 2;
+        color        : $darkBlue;
+        font-size    : 0.9em;
+        padding      : 1em 0 0.5em 0.5em ;
+    }
+    a.linkLikeAButton {
+      margin-top: 1.5em;
     }
     .browser {
-        display       : inline-block;
+        float         : left;
         max-height    : none;
         width         : 49%;
+        min-height    : 100%;
         vertical-align: middle;
         margin        : 0;
         z-index       : 2;
+    }
+    &.odd {
+      &::before {
+        transform: rotate(-2deg);
+        background-image: linear-gradient(to bottom left,#ffffff,#042275);
+      }
+      .floatInfo {
+        float: left;
+      }
+      h3 {
+        text-align: left;
+      }
+      .browser {
+        float: right;
+      }
     }
 }
 aside.container {

@@ -58,6 +58,10 @@ button {
     border-radius  : 4px;
     background     : transparent;
     transition     : background 0.3s ease, color 0.3s ease;
+
+    &.blue {
+      color: $darkBlue;
+    }
 }
 .innerText {
     max-width : 700px;

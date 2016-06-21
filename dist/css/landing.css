@@ -49,6 +49,9 @@ button {
   background: transparent;
   -webkit-transition: background 0.3s ease, color 0.3s ease;
   transition: background 0.3s ease, color 0.3s ease; }
+  a.linkLikeAButton.blue,
+  button.blue {
+    color: #3E4F69; }
 
 .innerText {
   max-width: 700px;

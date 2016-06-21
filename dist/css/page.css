@@ -49,6 +49,9 @@ button {
   background: transparent;
   -webkit-transition: background 0.3s ease, color 0.3s ease;
   transition: background 0.3s ease, color 0.3s ease; }
+  a.linkLikeAButton.blue,
+  button.blue {
+    color: #3E4F69; }
 
 .innerText {
   max-width: 700px;
@@ -1018,9 +1021,9 @@ article.work {
   display: block;
   position: relative;
   margin: 0 auto;
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100%;
-  padding: 7em 0.8em;
+  padding: 7em 1.5em;
   box-sizing: border-box; }
   article.work::before {
     content: ' ';
@@ -1029,37 +1032,51 @@ article.work {
     top: 4em;
     height: 84%;
     width: 110%;
-    opacity: 0.2;
+    opacity: 0.3;
     background-image: -webkit-linear-gradient(top left, #ffffff, #042275);
     background-image: linear-gradient(to bottom right, #ffffff, #042275);
+    border: 1px solid #FAFAFA;
     -webkit-transform: rotate(2deg);
             transform: rotate(2deg);
     z-index: -1; }
+  article.work .floatInfo {
+    float: right;
+    width: 49%; }
   article.work h3 {
     font-family: 'Libre Baskerville', serif;
     color: #3E4F69;
+    padding: 0.5em 0 0.5em 0.5em;
     font-size: 1.8em;
-    text-align: right;
     margin: 0 auto 0.2em;
-    z-index: 2; }
-  article.work .description {
-    display: inline-block;
-    margin-left: 7%;
-    margin-bottom: 3%;
-    width: 40%;
-    border-right: 1px solid #3E4F69;
-    vertical-align: middle;
+    z-index: 2;
+    text-align: right; }
+  article.work p {
+    margin-bottom: 1%;
     z-index: 2;
     color: #3E4F69;
     font-size: 0.9em;
-    padding: 0.5em 1em 1em; }
+    padding: 1em 0 0.5em 0.5em; }
+  article.work a.linkLikeAButton {
+    margin-top: 1.5em; }
   article.work .browser {
-    display: inline-block;
+    float: left;
     max-height: none;
     width: 49%;
+    min-height: 100%;
     vertical-align: middle;
     margin: 0;
     z-index: 2; }
+  article.work.odd::before {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+    background-image: -webkit-linear-gradient(top right, #ffffff, #042275);
+    background-image: linear-gradient(to bottom left, #ffffff, #042275); }
+  article.work.odd .floatInfo {
+    float: left; }
+  article.work.odd h3 {
+    text-align: left; }
+  article.work.odd .browser {
+    float: right; }
 
 aside.container {
   max-width: 700px; }
