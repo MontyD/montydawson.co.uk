@@ -1,16 +1,16 @@
 // Gruntfile.js
 module.exports = function(grunt) {
   grunt.initConfig({
-    imagemin: {
-      dynamic: {
-        files: [{
-          expand: true,
-          cwd: 'src/img',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: 'dist/img'
-        }]
-      }
-    },
+    // imagemin: {
+    //   dynamic: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: 'src/img',
+    //       src: ['**/*.{png,jpg,gif}'],
+    //       dest: 'dist/img'
+    //     }]
+    //   }
+    // },
     sprite: {
       all: {
         src: 'src/img/sprites/*.png',
@@ -113,6 +113,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-spritesmith');
   grunt.loadNpmTasks('grunt-postcss');
 
-  grunt.registerTask('default', ['imagemin', 'sprite', 'sass', 'postcss', 'cssmin', 'jshint', 'uglify', 'concurrent']);
+  grunt.registerTask('default', [/*'imagemin',*/ 'sprite', 'sass', 'postcss', 'cssmin', 'jshint', 'uglify', 'concurrent']);
 
 };

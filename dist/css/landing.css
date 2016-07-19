@@ -1070,7 +1070,8 @@ section#first {
 #third {
   background-color: #00BCD4;
   text-align: center;
-  color: #FAFAFA; }
+  color: #FAFAFA;
+  overflow-x: hidden; }
   #third #work {
     padding: 1em 1em 5em;
     position: relative; }
