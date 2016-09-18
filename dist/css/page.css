@@ -279,18 +279,8 @@ nav#menu {
   overflow: hidden;
   opacity: 1;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
-  @media (max-width: 580px) {
-    .browser {
-      border-radius: 10px;
-      max-width: 12em;
-      max-height: 20em;
-      height: 20em;
-      margin: 6% auto; } }
   .browser .screen {
     background: #D0D0D0; }
-    @media (max-width: 580px) {
-      .browser .screen {
-        height: 90%; } }
   .browser .mobileBottom {
     display: none;
     position: relative;
@@ -300,9 +290,6 @@ nav#menu {
     margin: 0;
     padding: 5px 0;
     box-sizing: border-box; }
-    @media (max-width: 580px) {
-      .browser .mobileBottom {
-        display: block; } }
     .browser .mobileBottom .mobileButton {
       background: #696969;
       height: 20px;
@@ -313,23 +300,11 @@ nav#menu {
     display: block;
     margin: 10px auto 0;
     width: 100%; }
-    @media (max-width: 580px) {
-      .browser img {
-        width: 90%;
-        border: 1px solid #8C8C8C; } }
     .browser img.mobile {
       display: none; }
-    @media (max-width: 580px) {
-      .browser img.desktop {
-        display: none; }
-      .browser img.mobile {
-        display: block; } }
   .browser .toolbar {
     height: 40px;
     background-color: #D0D0D0; }
-    @media (max-width: 580px) {
-      .browser .toolbar {
-        height: 15px; } }
   .browser .speaker {
     position: absolute;
     margin: 0 auto;
@@ -342,9 +317,6 @@ nav#menu {
     left: 0;
     margin: 0 auto;
     display: none; }
-    @media (max-width: 580px) {
-      .browser .speaker {
-        display: block; } }
   .browser .addressbar {
     display: inline-block;
     background-color: #FAFAFA;
@@ -355,20 +327,17 @@ nav#menu {
     padding: 4px;
     font-size: 0.8em;
     color: #212121; }
+    @media (max-width: 800px) {
+      .browser .addressbar {
+        font-size: 0.6em; } }
     .browser .addressbar a {
       color: #212121;
       text-decoration: none; }
-    @media (max-width: 580px) {
-      .browser .addressbar {
-        display: none; } }
   .browser .browserButtons {
     position: absolute;
     top: 0;
     left: 0;
     padding: 1px 4px; }
-    @media (max-width: 580px) {
-      .browser .browserButtons {
-        display: none; } }
     .browser .browserButtons .fakeButton {
       display: inline-block;
       width: 10px;
@@ -381,6 +350,33 @@ nav#menu {
       background-color: #E08800; }
     .browser .browserButtons .maximiseButton {
       background-color: #4AE000; }
+  @media (max-width: 580px) {
+    .browser.breakMobile {
+      border-radius: 10px;
+      max-width: 12em;
+      max-height: 20em;
+      height: 20em;
+      margin: 6% auto; } }
+  @media (max-width: 580px) {
+    .browser.breakMobile .screen {
+      height: 90%; } }
+  @media (max-width: 580px) {
+    .browser.breakMobile .addressbar, .browser.breakMobile .browserButtons {
+      display: none; } }
+  @media (max-width: 580px) {
+    .browser.breakMobile .speaker, .browser.breakMobile .mobileBottom {
+      display: block; } }
+  @media (max-width: 580px) {
+    .browser.breakMobile .toolbar {
+      height: 15px; } }
+  @media (max-width: 580px) {
+    .browser.breakMobile img {
+      width: 90%;
+      border: 1px solid #8C8C8C; }
+      .browser.breakMobile img.desktop {
+        display: none; }
+      .browser.breakMobile img.mobile {
+        display: block; } }
 
 .circle {
   position: absolute;
@@ -787,6 +783,7 @@ header {
 section h2 {
   padding-top: 0.4em;
   padding-bottom: 0.2em;
+  width: 90%;
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
@@ -1046,6 +1043,12 @@ article.work {
   article.work .floatInfo {
     float: right;
     width: 49%; }
+    @media (max-width: 1000px) {
+      article.work .floatInfo {
+        display: block;
+        float: none;
+        width: 97%;
+        margin: 0 auto; } }
   article.work h3 {
     font-family: 'Libre Baskerville', serif;
     padding: 0.5em 0 0.5em 0.5em;
@@ -1053,6 +1056,10 @@ article.work {
     margin: 0 auto 0.2em;
     z-index: 2;
     text-align: right; }
+    @media (max-width: 1000px) {
+      article.work h3 {
+        text-align: center;
+        font-size: 1.6em; } }
   article.work p {
     margin-bottom: 1%;
     z-index: 2;
@@ -1068,15 +1075,32 @@ article.work {
     vertical-align: middle;
     margin: 0;
     z-index: 2; }
+    @media (max-width: 1000px) {
+      article.work .browser {
+        display: block;
+        float: none;
+        width: 90%;
+        max-width: 600px;
+        margin: 2em auto; } }
   article.work.odd::before {
     -webkit-transform: rotate(-2deg);
             transform: rotate(-2deg); }
   article.work.odd .floatInfo {
     float: left; }
+    @media (max-width: 1000px) {
+      article.work.odd .floatInfo {
+        display: block;
+        float: none; } }
   article.work.odd h3 {
     text-align: left; }
+    @media (max-width: 1000px) {
+      article.work.odd h3 {
+        text-align: center; } }
   article.work.odd .browser {
     float: right; }
+    @media (max-width: 1000px) {
+      article.work.odd .browser {
+        float: none; } }
 
 aside.container {
   max-width: 700px; }

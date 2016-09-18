@@ -20,9 +20,7 @@
         };
     }
 
-    var bLazy = new Blazy({
-        offset: 100
-    });
+    var bLazy = new Blazy();
     // *************** //
 
     var timer;
@@ -400,11 +398,11 @@
                 }
                 infoButton.href = currentItem.moreInfo;
                 infoButton.title = currentItem.title;
-                newCurrent.className = "browser current";
+                newCurrent.className = "browser breakMobile current";
                 if (direction === 'left') {
-                    current.className = "browser rightPreview";
+                    current.className = "browser breakMobile rightPreview";
                 } else {
-                    current.className = "browser leftPreview";
+                    current.className = "browser breakMobile leftPreview";
                 }
                 toggleProjects.assign();
                 toggleProjectBase.className = '';

@@ -59,6 +59,7 @@ section {
     h2 {
         padding-top   : 0.4em;
         padding-bottom: 0.2em;
+        width: 90%;
         max-width     : 700px;
         margin        : 0 auto;
         text-align    : center;
@@ -407,6 +408,12 @@ article.work {
     .floatInfo {
         float: right;
         width: 49%;
+        @media(max-width: 1000px) {
+          display: block;
+          float: none;
+          width: 97%;
+          margin: 0 auto;
+        }
     }
 
     h3 {
@@ -416,6 +423,10 @@ article.work {
         margin     : 0 auto 0.2em;
         z-index    : 2;
         text-align : right;
+        @media(max-width: 1000px) {
+          text-align: center;
+          font-size: 1.6em;
+        }
     }
 
     p {
@@ -437,7 +448,15 @@ article.work {
         vertical-align: middle;
         margin        : 0;
         z-index       : 2;
+        @media(max-width: 1000px) {
+          display: block;
+          float: none;
+          width: 90%;
+          max-width: 600px;
+          margin: 2em auto;
+        }
     }
+
 
     &.odd {
         &::before {
@@ -446,14 +465,24 @@ article.work {
 
         .floatInfo {
             float: left;
+            @media(max-width: 1000px) {
+              display: block;
+              float: none;
+            }
         }
 
         h3 {
             text-align: left;
+            @media(max-width: 1000px) {
+              text-align: center;
+            }
         }
 
         .browser {
             float: right;
+            @media(max-width: 1000px) {
+              float: none;
+            }
         }
     }
 }

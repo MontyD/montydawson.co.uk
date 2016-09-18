@@ -20,9 +20,7 @@
         };
     }
     if (typeof Blazy !== "undefined") {
-        var bLazy = new Blazy({
-            offset: 100
-        });
+        var bLazy = new Blazy();
     }
     // ** Global object ** //
     var landingPage = {
