@@ -390,14 +390,17 @@ article.work {
     width     : 100%;
     padding   : 7em 1.5em;
     box-sizing: border-box;
+    @media(max-width: 600px) {
+      padding-bottom: 0;
+    }
 
     &::before {
         content   : ' ';
         position  : absolute;
-        left      : -2em;
+        left      : -5em;
         top       : 4em;
         height    : 84%;
-        width     : 110%;
+        width     : 180%;
         opacity   : 0.2;
         background: #3C5586;
         border    : 1px solid $whiteFont;

@@ -12,15 +12,16 @@
       "title": "Dublove",
       "desktopImage": "dublove.png",
       "mobileImage": "dublove-mobile.png",
-      "description": "A fully functional responsive website, developed using the PHP CMS Silverstripe. I developed the theme from scratch, utilising a range of techniques to keep the site lightweight but also fully of content.",
-      "moreInfo": "./work.html#under-three"
+      "description": "A fully functional responsive website, developed using the PHP CMS Silverstripe. I coded the theme from scratch, utilising a range of techniques to keep the site lightweight but also full of content.",
+      "moreInfo": "./work.html#dublove"
     },
     {
       "title": "3 Minute Website",
       "desktopImage": "website.png",
       "mobileImage": "website-mobile.png",
       "description": "A small personal project to design a website that codes itself in real time - with the code being displayed to the user alongside the result. A fun exercise in modular JS.",
-      "moreInfo": "./work.html#dublove"
+      "siteLink": "https://montydawson.co.uk/work/website-in-under-three/",
+      "moreInfo": "./work.html#under-three"
     },
     {
       "title": "The Well Hopton",
@@ -34,7 +35,7 @@
       "title": "Slack Quiz Integration",
       "desktopImage": "slackquiz.png",
       "mobileImage": "slackquiz-mobile.png",
-      "description": "A fun personal project that helped develop my backend skills. A quiz integration for Slack Teams that allows you to answer questions in slack and submit new questions and view stats using a small web app. Written in NodeJS and deployed to heroku.",
+      "description": "A fun personal project that helped develop my backend skills. A quiz integration for Slack Teams that allows you to answer questions in slack and submit new questions and view stats using a small web app. Written in NodeJS and deployed to Heroku.",
       "moreInfo": "./work.html#slackquiz"
     }
   ]

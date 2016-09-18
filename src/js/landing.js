@@ -20,7 +20,9 @@
         };
     }
 
-    var bLazy = new Blazy();
+    var bLazy = new Blazy({
+      offset: 1000
+    });
     // *************** //
 
     var timer;
@@ -362,25 +364,27 @@
             this.transitioning = true;
 
             toggleProjectBase.className += 'transition move' + direction;
+            var current = toggleProjectBase.getElementsByClassName('current')[0];
+            var newCurrent;
 
             if (direction === 'left') {
-                if (this.index - 1 > -1) {
-                    this.index--;
-                } else {
-                    this.index = this.data.length - 1;
-                }
-                newCurrent = toggleProjectBase.getElementsByClassName('rightPreview')[0];
-            } else {
+
                 if (this.index + 1 < this.data.length) {
                     this.index++;
                 } else {
                     this.index = 0;
                 }
+                newCurrent = toggleProjectBase.getElementsByClassName('rightPreview')[0];
+            } else {
+                if (this.index - 1 > -1) {
+                    this.index--;
+                } else {
+                    this.index = this.data.length - 1;
+                }
                 newCurrent = toggleProjectBase.getElementsByClassName('leftPreview')[0];
             }
+
             var currentItem = this.data[this.index];
-            var current = toggleProjectBase.getElementsByClassName('current')[0];
-            var newCurrent;
 
 
             window.setTimeout(function() {

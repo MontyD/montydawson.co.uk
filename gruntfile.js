@@ -1,16 +1,16 @@
 // Gruntfile.js
 module.exports = function(grunt) {
   grunt.initConfig({
-    // imagemin: {
-    //   dynamic: {
-    //     files: [{
-    //       expand: true,
-    //       cwd: 'src/img',
-    //       src: ['**/*.{png,jpg,gif}'],
-    //       dest: 'dist/img'
-    //     }]
-    //   }
-    // },
+    imagemin: {
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: 'src/img',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'dist/img'
+        }]
+      }
+    },
     sprite: {
       all: {
         src: 'src/img/sprites/*.png',
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
         map: false,
         processors: [
           require('autoprefixer')({
-            browsers: ['> 1%'],
+            browsers: ['last 5 versions'],
             remove: false
           })
         ]

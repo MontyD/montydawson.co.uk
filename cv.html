@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,6 +35,7 @@
     <link rel="stylesheet" href="dist/css/page.min.css">
     <title>Monty Dawson | CV</title>
 </head>
+
 <body class="noJS">
     <nav class="opener active" id="hamburger">
         <a href="#" title="Show Navigation" class="toggleMenu"><i class="icon icon-menu"></i></a>
@@ -55,7 +57,7 @@
     </header>
     <section class="container" id="sectionCV">
         <h2>Curriculum Vitae</h2>
-        <aside class="alignRight slightText">Just want the pdf? <a href="./MontyDawson2016CV.pdf" title="PDF CV">Click here</a></aside>
+        <aside class="alignRight slightText">Just want the pdf? <a href="./cv.pdf" title="PDF CV">Click here</a></aside>
         <article id="mainCV" class="active">
             <div id="middleLine">
             </div>
@@ -65,9 +67,9 @@
                 </div>
                 <h3>Freelance</h3>
                 <span class="role">Web Developer</span>
-                <p>In order to further my skills and gain experience with new technologies I began to take on freelance projects for local organisations. Most recently I developed a small responsive website for a local coffee shop. In order to gain as much
-                    from the experience as possible I decided not to use any CSS or JavaScript frameworks, and to integrate the site with the PHP CMS SilverStripe. This allowed me to learn a lot, whilst also delivering a high quality product. In order
-                    to further my back-end skills I also developed a Slack quiz integration written on NodeJS. This experience helped develop my JavaScript skills, whilst also giving me more understaning of the challenges of working with external APIs.</p>
+                <p>In order to further my skills and gain experience with new technologies I began to take on freelance projects for local organisations. I've developed a couple of small websites for local businesses - both built using the PHP CMS Silverstripe.
+                    To gain as much as possible from these assignments I coded the themes from scratch - working to meet the client's brief whilst also ensuring clean and efficient code. Furthermore, I've taken on personal projects such as a real time
+                    todolist webapp - written with Angular on the frontend and NodeJS on the backend. These projects have given me experience of working with APIs, databases (primarily Postgres), and ES6 - alongside frameworks such as Angular and Vue.</p>
                 <time class="time">2015 - ongoing</time>
             </div>
             <div class="event left yellow">
@@ -85,11 +87,12 @@
                     <div class="circle circle1"></div>
                 </div>
                 <h3>Victoria Forms</h3>
-                <span class="role">eForms Consultant</span>
-                <p>Victoria Forms has allowed me to further my development skills, grow my confidence, and gain experience of working with customers in an web development environment. Although my role was not initially technical, it sparked an interest in
-                    web development and a motivation to learn. I quickly gained experience of HTML, CSS, and JavaScript, and brought these skills into my role. I was tasked with manging the redevelopment of the majority of our customers' front end styling,
-                    and also with developing new front-end features for our main product. In my role as a general consultant I was the lead contact for some of our largest customers and successfully lead the setup of solutions for new customers and significant
-                    redevelopment projects for our existing customers. I greatly enjoyed the opportunity to work with a small, dedicated team and that I was able to grow and apply new development skills.</p>
+                <span class="role">Consultant</span>
+                <p>Victoria Forms is one of the leading providers of web forms for Local Government and large businesses. My time at Victoria Forms has allowed me to further my development skills, grow my confidence, and gain experience of working with customers
+                    in a web development environment. I quickly gained experience of HTML, CSS, and JavaScript, eventually being tasked with managing the redevelopment of the majority of our customers' front end design. I gained experience of working
+                    with backend technologies as well - writing a custom webapp that automated key processes, setting up a number of 3rd party applications on Linux and Windows cloud servers, and helping to maintain the architecture of our main product.</p>
+                <p>In my role as a general consultant I was the lead contact for key customers, and successfully lead the setup of solutions for new customers and significant redevelopment projects for our existing customers. I was tasked with managing entire
+                    projects on my own, offering ongoing support to the customer and, when needed, on-site training. Furthermore I was often required to work as part of a team - helping to organise a join effort to meet the customer's needs.</p>
                 <time class="time">2014 - ongoing</time>
             </div>
             <div class="event left">
@@ -138,10 +141,15 @@
                 </div>
                 <h3>Hartismere High School and Sixth Form</h3>
                 <span class="role">Student - GCSE and A Levels</span>
-                <p>I gained three A Levels – History (A), Music (B), English (B) – and an AS level in Photography (A). Previous to this I achieved nine GCSEs, seven of which were A grade (including Maths and English), and two at B grade. It feels pretty stupid to be putting my GCSE results on here, but then you are reading them...</p>
+                <p>I gained three A Levels – History (A), Music (B), English (B) – and an AS level in Photography (A). Previous to this I achieved nine GCSEs, seven of which were A grade (including Maths and English), and two at B grade. It feels pretty
+                    stupid to be putting my GCSE results on here, but then you are reading them...</p>
                 <time class="time">2002 - 2010</time>
             </div>
             <div class="clear"></div>
+        </article>
+        <article class="contact-me">
+            <p>You've hit the end of this page. I'm interested in hearing about why you're here:</p>
+            <a href="mailto:hello@montydawson.co.uk" class="linkLikeAButton blue" title="Email me">Email Me!</a>
         </article>
     </section>
     <footer>
@@ -151,7 +159,21 @@
         </div>
     </footer>
     <script src="dist/js/page.js"></script>
-    <script src="http://192.168.0.4:35729/livereload.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-74422232-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
 
 </html>
