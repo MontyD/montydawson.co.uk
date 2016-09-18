@@ -7,8 +7,38 @@ $dark: #004D40;
 $brightAccent: #FBC02D;
 $subtleText: #9E9E9E;
 $darkBlue: #3E4F69;
+$gold: #A57B2A;
+$darkGold: #795000;
 $slightBackground: rgba(224, 224, 224, 0.2);
 $documentWidth: 1200px;
+@function top-shadow($depth) {
+    $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px;
+    $blur          : nth(1.5 3 10 14 19, $depth) * 4px;
+    $color         : rgba(black, nth(.12 .16 .19 .25 .30, $depth));
+    @return 0 $primary-offset $blur $color;
+}
+@function bottom-shadow($depth) {
+    $primary-offset: nth(1.5 3 6 10 15, $depth) * 1px;
+    $blur          : nth(1 3 3 5 6, $depth) * 4px;
+    $color         : rgba(black, nth(.24 .23 .23 .22 .22, $depth));
+    @return 0 $primary-offset $blur $color;
+}
+//** Mixins **//
+@mixin shadow($depth) {
+     @if $depth < 1{
+        box-shadow: none;
+    }
+    @else {
+        box-shadow: bottom-shadow($depth), top-shadow($depth);
+    }
+}
+@mixin darkShadow {
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+}
+@mixin lightShadow {
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+}
+
 body {
     margin                : 0;
     padding               : 0;
@@ -20,6 +50,7 @@ body {
     color                 : #212121;
     -webkit-font-smoothing: antialiased;
 }
+
 h1,
 h2,
 h3,
@@ -28,6 +59,7 @@ h5 {
     font-weight: normal;
     color      : $whiteFont;
 }
+
 .page {
     background   : $whiteFont;
     padding      : 1em;
@@ -37,16 +69,19 @@ h5 {
     z-index      : 10;
     border-radius: 0.3em;
 }
+
 p {
     line-height: 150%;
     text-align : justify;
 }
+
 a {
     padding         : 10px;
     border-radius   : 4px;
     background-color: transparent;
     transition      : background-color 0.5s ease;
 }
+
 a.linkLikeAButton,
 button {
     color          : $whiteFont;
@@ -60,9 +95,16 @@ button {
     transition     : background 0.3s ease, color 0.3s ease;
 
     &.blue {
-      color: $darkBlue;
+        background  : $darkBlue;
+        border-color: $darkBlue;
+    }
+
+    &.gold {
+        background  : $darkGold;
+        border-color: $darkGold;
     }
 }
+
 .innerText {
     max-width : 700px;
     margin    : 0.5em auto;
@@ -70,15 +112,19 @@ button {
     box-sizing: border-box;
     padding   : 0 1em;
 }
+
 .italic {
     font-style: italic;
 }
+
 .alignRight {
     text-align: right;
 }
+
 .slightText {
     color     : #8A8A8A;
     font-style: italic;
+
     a {
         color          : #616161;
         text-decoration: none;
@@ -86,6 +132,7 @@ button {
         margin         : 0;
     }
 }
+
 .container {
     display   : block;
     position  : relative;
@@ -96,6 +143,7 @@ button {
     box-sizing: border-box;
 }
 //-- Sprites
+
 .icon-close {
     background-image   : url("../../dist/img/sprites/img.png");
     background-position: -55px 0;
@@ -103,6 +151,7 @@ button {
     height             : 25px;
     display            : block;
 }
+
 .icon-down {
     background-image   : url("../../dist/img/sprites/img.png");
     background-position: 0 0;
@@ -110,6 +159,7 @@ button {
     height             : 22px;
     display            : block;
 }
+
 .icon-menu {
     background-image   : url("../../dist/img/sprites/img.png");
     background-position: 0 -22px;
@@ -117,14 +167,17 @@ button {
     height             : 23px;
     display            : block;
 }
+
 .b-lazy {
     transition: opacity 500ms ease-in-out;
     max-width : 100%;
     opacity   : 0;
 }
+
 .b-lazy.b-loaded {
     opacity: 1;
 }
+
 .opener {
     position     : fixed;
     top          : 1.6em;
@@ -138,10 +191,12 @@ button {
     padding      : 0.6em;
     top          : 1.4em;
     right        : 1.4em;
+
     &.close {
         width     : 2.7em;
         box-sizing: border-box;
     }
+
     a {
         padding        : 0;
         z-index        : 1;
@@ -149,20 +204,24 @@ button {
         text-transform : uppercase;
         text-decoration: none;
         width          : 25px;
+
         img {
             width: 100%;
         }
     }
+
     #hamburger {
         opacity   : 1;
         transition: opacity 0.5s ease;
     }
 }
+
 .home .opener {
     animation-name           : open;
     animation-duration       : 3s;
     animation-iteration-count: 1;
 }
+
 .gentleScroll {
     background-color         : rgba(0,0,0,0.5);
     height                   : 20px;
@@ -171,28 +230,33 @@ button {
     animation-name           : open;
     animation-duration       : 3s;
     animation-iteration-count: 1;
+
     &:hover {
         background: rgba(0,0,0,0.7);
     }
 }
+
 .half {
     display : block;
     position: relative;
     height  : 100%;
     width   : 50%;
 }
+
 .left {
     position  : absolute;
     left      : 0;
     top       : 0;
     text-align: left;
 }
+
 .right {
     position  : absolute;
     right     : 0;
     top       : 0;
     text-align: left;
 }
+
 .clear {
     display: block;
     clear  : both;
@@ -202,12 +266,14 @@ button {
         width : 100%;
         height: auto;
     }
+
     .left,
     .right {
         position: relative;
         left    : 0;
     }
 }
+
 nav#menu {
     position  : fixed;
     margin    : 0;
@@ -220,6 +286,7 @@ nav#menu {
     background: rgba(0,0,0,0.9);
     transition: opacity 0.4s ease, visibility 0.4s ease;
     z-index   : 1001;
+
     &::before {
         content   : ' ';
         position  : absolute;
@@ -233,10 +300,12 @@ nav#menu {
         transform : skewY(20deg);
         z-index   : -2;
     }
+
     &.active {
         visibility: visible;
         opacity   : 1;
     }
+
     section {
         position      : absolute;
         margin        : 0 auto;
@@ -255,6 +324,7 @@ nav#menu {
         box-shadow    : 0 3px 5px 0 rgba(0,0,0,0.54);
         text-align    : center;
         z-index       : 9999;
+
         a {
             display        : block;
             margin         : 1em auto;
@@ -262,6 +332,7 @@ nav#menu {
             color          : $whiteFont;
             font-size      : 1.4em;
         }
+
         .close a {
             margin   : 0 auto;
             padding  : 0;
@@ -269,6 +340,7 @@ nav#menu {
         }
     }
 }
+
 .browser {
     display      : block;
     position     : relative;
@@ -277,10 +349,10 @@ nav#menu {
     width        : 80%;
     max-width    : 800px;
     border       : 1px solid #B5B3B3;
-    box-shadow   : 0 2px 3px 0 $slightBackground;
     border-radius: 3px;
     overflow     : hidden;
     opacity      : 1;
+    @include shadow(1);
     @media (max-width: 580px) {
         border-radius: 10px;
         max-width    : 12em;
@@ -288,12 +360,14 @@ nav#menu {
         height       : 20em;
         margin       : 6% auto;
     }
+
     .screen {
         background: #D0D0D0;
         @media(max-width: 580px) {
             height: 90%;
         }
     }
+
     .mobileBottom {
         display   : none;
         position  : relative;
@@ -306,6 +380,7 @@ nav#menu {
         @media(max-width: 580px) {
             display: block;
         }
+
         .mobileButton {
             background   : #696969;
             height       : 20px;
@@ -314,6 +389,7 @@ nav#menu {
             margin       : 0 auto;
         }
     }
+
     img {
         display: block;
         margin : 10px auto 0;
@@ -322,6 +398,7 @@ nav#menu {
             width : 90%;
             border: 1px solid #8C8C8C;
         }
+
         &.mobile {
             display: none;
         }
@@ -329,11 +406,13 @@ nav#menu {
             &.desktop {
                 display: none;
             }
+
             &.mobile {
                 display: block;
             }
         }
     }
+
     .toolbar {
         height          : 40px;
         background-color: #D0D0D0;
@@ -341,6 +420,7 @@ nav#menu {
             height: 15px;
         }
     }
+
     .speaker {
         position     : absolute;
         margin       : 0 auto;
@@ -357,6 +437,7 @@ nav#menu {
             display: block;
         }
     }
+
     .addressbar {
         display         : inline-block;
         background-color: #FAFAFA;
@@ -367,6 +448,7 @@ nav#menu {
         padding         : 4px;
         font-size       : 0.8em;
         color           : #212121;
+
         a {
             color          : #212121;
             text-decoration: none;
@@ -375,6 +457,7 @@ nav#menu {
             display: none;
         }
     }
+
     .browserButtons {
         position: absolute;
         top     : 0;
@@ -383,6 +466,7 @@ nav#menu {
         @media (max-width: 580px) {
             display: none;
         }
+
         .fakeButton {
             display      : inline-block;
             width        : 10px;
@@ -390,17 +474,21 @@ nav#menu {
             border-radius: 50%;
             margin       : 0 2px;
         }
+
         .closeButton {
             background-color: #E00000;
         }
+
         .minimiseButton {
             background-color: #E08800;
         }
+
         .maximiseButton {
             background-color: #4AE000;
         }
     }
 }
+
 .circle {
     position     : absolute;
     overflow     : hidden;
@@ -411,6 +499,7 @@ nav#menu {
     bottom       : 0;
     right        : 0;
 }
+
 .circle1 {
     background-color         : #00BCD4;
     transform                : skewX(0deg) scale(1.1,1.12) translateX(6px);
@@ -418,6 +507,7 @@ nav#menu {
     animation-iteration-count: 1;
     opacity                  : 0.6;
 }
+
 .circle2 {
     background-color         : #004D40;
     opacity                  : 0.5;
@@ -425,6 +515,7 @@ nav#menu {
     animation                : circle2AnimateIn 2s ease-out;
     animation-iteration-count: 1;
 }
+
 .circle3 {
     background-color         : #FBC02D;
     transform                : skewY(0.2deg) scale(0.95) translateY(-8px);
@@ -432,6 +523,7 @@ nav#menu {
     animation                : circle3AnimateIn 2s ease-out;
     animation-iteration-count: 1;
 }
+
 .circle4 {
     background-color         : #E0E0E0;
     transform                : scale(0.95) skewY(1deg);
@@ -440,16 +532,20 @@ nav#menu {
     animation                : circle4AnimateIn 2s ease-out;
     animation-iteration-count: 1;
 }
+
 .active {
     .circle1 {
         animation: circle1ani 50s infinite ease-in-out;
     }
+
     .circle2 {
         animation: circle2ani 20s infinite ease-in-out;
     }
+
     .circle3 {
         animation: circle3ani 13s infinite ease-in-out;
     }
+
     .circle4 {
         animation: circle4ani 35s infinite ease-in-out;
     }
@@ -459,6 +555,7 @@ nav#menu {
         opacity  : 0;
         transform: scale(9) translateX(-20px);
     }
+
     100% {
         opacity  : 0.6;
         transform: skewX(0deg) scale(1.1,1.12) translateX(6px);
@@ -469,10 +566,12 @@ nav#menu {
         opacity  : 0;
         transform: scale(9) translateX(-20px);
     }
+
     20% {
         opacity  : 0.1;
         transform: scale(8) translateX(30px);
     }
+
     100% {
         opacity  : 0.5;
         transform: scale(1.1,1.12) translateX(-9px);
@@ -483,10 +582,12 @@ nav#menu {
         opacity  : 0;
         transform: scale(7) translateY(20px);
     }
+
     40% {
         opacity  : 0.6;
         transform: scale(7) translateY(20px);
     }
+
     100% {
         opacity  : 0.7;
         transform: skewY(0.2deg) scale(0.95) translateY(-8px);
@@ -497,10 +598,12 @@ nav#menu {
         opacity  : 1;
         transform: scale(5);
     }
+
     30% {
         opacity  : 1;
         transform: scale(5);
     }
+
     100% {
         opacity  : 0.6;
         transform: scale(0.95) skewY(1deg);
@@ -511,22 +614,27 @@ nav#menu {
         opacity  : 0.6;
         transform: skewX(0deg) scale(1.1,1.12) translateX(6px);
     }
+
     20% {
         opacity  : 0.5;
         transform: skewX(2.5deg) scale(1.13,1.13) translateX(6px);
     }
+
     40% {
         opacity  : 0.3;
         transform: skewX(4deg) scale(1.16,1.17) translateX(8px);
     }
+
     60% {
         opacity  : 0.6;
         transform: skewX(6deg) scale(1.08,1.06) translateX(3px);
     }
+
     80% {
         opacity  : 0.8;
         transform: skewX(-2deg) scale(1.03,1) translateX(2px);
     }
+
     100% {
         opacity  : 0.6;
         transform: skewX(0deg) scale(1.1,1.12) translateX(6px);
@@ -537,22 +645,27 @@ nav#menu {
         opacity  : 0.5;
         transform: skewX(0deg) scale(1.1,1.12) translateX(-9px);
     }
+
     20% {
         opacity  : 0.6;
         transform: skewX(2.5deg) scale(1.12,1.2) translateX(-10px);
     }
+
     40% {
         opacity  : 0.3;
         transform: skewX(4deg) scale(1.2,1.3) translateX(-14px);
     }
+
     60% {
         opacity  : 0.4;
         transform: skewX(6deg) scale(1,1.16) translateX(-9px);
     }
+
     80% {
         opacity  : 0.6;
         transform: skewX(-2deg) scale(1.1,1.1) translateX(-9px);
     }
+
     100% {
         opacity  : 0.5;
         transform: skewX(0deg) scale(1.1,1.12) translateX(-9px);
@@ -563,10 +676,12 @@ nav#menu {
         opacity  : 0.7;
         transform: skewY(0.2deg) scale(0.95) translateY(-8px);
     }
+
     50% {
         opacity  : 0.3;
         transform: skewY(4deg) scale(1.04) translateY(-10px);
     }
+
     100% {
         opacity  : 0.7;
         transform: skewY(0.2deg) scale(0.95) translateY(-8px);
@@ -577,18 +692,22 @@ nav#menu {
         opacity  : 0.6;
         transform: scale(0.95) skewY(1deg);
     }
+
     25% {
         opacity  : 0.5;
         transform: scale(0.93) skewY(1.8deg);
     }
+
     50% {
         opacity  : 0.4;
         transform: scale(0.95) skewY(2deg);
     }
+
     75% {
         opacity  : 0.6;
         transform: scale(1, 1.01) skewX(4deg);
     }
+
     100% {
         opacity  : 0.6;
         transform: scale(0.95) skewY(1deg);
@@ -599,10 +718,12 @@ nav#menu {
         opacity  : 0;
         transform: scale(0);
     }
+
     90% {
         opacity  : 0;
         transform: scale(0);
     }
+
     100% {
         opacity  : 1;
         transform: scale(1);

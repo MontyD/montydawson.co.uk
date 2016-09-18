@@ -33,7 +33,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="dist/css/page.min.css">
-    <title>Monty Dawson | CV</title>
+    <title>Monty Dawson | Work</title>
 </head>
 
 <body class="noJS">
@@ -61,14 +61,94 @@
             <p class="slightText">I will happily admit that I am just starting out and still learning, but I've found it far more enjoyable to learn through doing. So below are a few different learning exercises that I've put myself through. I've put a lot of myself into them
                 and thoroughly enjoyed the work I've put into them.</p>
         </aside>
+        <article class="work odd" id="todoist">
+            <div class="floatInfo">
+                <h3>Todoist | Personal Project</h3>
+                <p>In order to solidify my knowledge of Angular and ES6, I did what everyone does - created a todo list app. To push myself I decided to build in the ability to collaborate on todo lists. I wanted to create something where people could log
+                    in and act on todo lists together, with actions being updated across all users in real time. This was challenging, but something I ultimately pulled off. I added a few nice features on the frontend, including a fun "overview" page containing a graph of weekly progress. The backend is built on the ExpressJS framework and postgres for the database.
+                    The frontend uses Angular 1 and Sockets.io as a wrapper for the Websockets API.</p>
+                <p>Although it's still a work in progress I really like how it has come together. I've learnt a lot about tracking state and data in an asynchronous environment as well as greatly improving my JS skills. The site is hosted on the free tier
+                    on Heroku - so will take a few seconds to "wake up" when first called.</p>
+                <a href="http://todoist.montydawson.co.uk" target="_blank" class="linkLikeAButton blue" title="Todoist">See the site</a><a href="https://github.com/MontyD/todoist" class="linkLikeAButton blue" title="Todoist" target="_blank">See the code</a>
+            </div>
+            <div class="browser">
+                <div class="screen">
+                    <div class="toolbar">
+                        <div class="browserButtons">
+                            <div class="closeButton fakeButton"></div>
+                            <div class="minimiseButton fakeButton"></div>
+                            <div class="maximiseButton fakeButton"></div>
+                        </div>
+                        <div class="addressbar">
+                            <a href="http://todoist.montydawson.co.uk" id="addressBar" title="The Well">todoist.montydawson.co.uk</a>
+                        </div>
+                    </div>
+                    <img class="b-lazy desktop" id="desktopImage" data-src="./dist/img/Todoist.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The Well" />
+                </div>
+            </div>
+            <div class="clear"></div>
+        </article>
+        <article class="work" id="dublove">
+            <div class="floatInfo">
+                <h3>Dublove | Client project</h3>
+                <p>A small site for a local VW chaufeeuring company. This site helped me grow my skills at developing for the PHP CMS Silverstripe. I took advantage of the rich API, creating a customisable theme, complete with front-end forms for customers
+                    to use to raise inquiries and leave feedback. I ensured that the site was as lightweight as possible, with all images being lazy-loaded, resources minified and gziped, and all vector graphics loaded through gruntify - serving the most
+                    effecient version supported by the browser. I also developed my skills at writing efficient modular JS, using webpack and grunt for bundling and minification.</p>
+                <p>I am very proud of this site, and have really enjoyed working with the client to put something together that is developed to their brief and coded cleanly and efficiently. The site is due to go live at the end of this year.</p>
+                <a href="https://github.com/MontyD/dublove" class="linkLikeAButton blue" title="Dublove" target="_blank">See the code</a>
+            </div>
+            <div class="browser">
+                <div class="screen">
+                    <div class="toolbar">
+                        <div class="browserButtons">
+                            <div class="closeButton fakeButton"></div>
+                            <div class="minimiseButton fakeButton"></div>
+                            <div class="maximiseButton fakeButton"></div>
+                        </div>
+                        <div class="addressbar">
+                            not yet live
+                        </div>
+                    </div>
+                    <img class="b-lazy desktop" id="desktopImage" data-src="./dist/img/dublove.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The Well" />
+                </div>
+            </div>
+            <div class="clear"></div>
+        </article>
+        <article class="work odd" id="under-three">
+            <div class="floatInfo">
+                <h3>A website in under three minutes | Personal project</h3>
+                <p>I had the fairly stupid idea that it would be fun to create a website that codes itself in real time - with the process of writing HTML, CSS and JS being shown to the user. So that's what I made. It was fun pushing my knowledge of JS - and again helped me in writing modular and efficient code. The end result is pretty good, with HTML CSS and JS being written and applied in "real time" by looping through a JSON consisting of snippets of code interlaced with comments. The syntax highlighting of the code is particularly nice - aided by the prism.js library.</p>
+                <p>The website made at the end of the three minutes is nothing special at all - but I am proud of the way that it's delivered with all the code to see.</p>
+                <a href="https://montydawson.co.uk/work/website-in-under-three/" class="linkLikeAButton blue" title="Website" target="_blank">See the side</a>
+                <a href="https://github.com/MontyD/thisisawebsite" class="linkLikeAButton blue" title="Dublove" target="_blank">See the code</a>
+            </div>
+            <div class="browser">
+                <div class="screen">
+                    <div class="toolbar">
+                        <div class="browserButtons">
+                            <div class="closeButton fakeButton"></div>
+                            <div class="minimiseButton fakeButton"></div>
+                            <div class="maximiseButton fakeButton"></div>
+                        </div>
+                        <div class="addressbar">
+                            <a href="https://montydawson.co.uk/work/website-in-under-three/" title="Website in under three mins">
+                                montydawson.co.uk/work/website-in-under-three/
+                              </a>
+                        </div>
+                    </div>
+                    <img class="b-lazy desktop" id="desktopImage" data-src="./dist/img/website.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The Well" />
+                </div>
+            </div>
+            <div class="clear"></div>
+        </article>
         <article class="work" id="theWell">
             <div class="floatInfo">
-                <h3>The Well | Hopton</h3>
-                    <p>The idea was to create a simple website which contained the menu, opening hours, some photos, and a bit of information about the purpose that this Christian Coffee Shop serves. I took my time and did things from scratch, creating the
-                        CSS and JavaScript without any frameworks. Because the content was open to change and there was the change of adding more functionality later on, I decided to use the very flexible PHP CMS SilverStripe. This was the biggest challenge
-                        for me, and helped to develop my back-end skills.</p>
-                    <p>I am very happy with the result, it draws on elements of The Well's branding and colours, it's fully responsive, the content is presented well, and the CMS is user-friendly so that anyone can make changes</p>
-                    <a href="https://www.thewellhopton.org.uk/" target="_blank" class="linkLikeAButton blue" title="The Well">See the site</a><a href="https://github.com/MontyD/thewelltheme" class="linkLikeAButton blue" title="The Well" target="_blank">See the code</a>
+                <h3>The Well | Client Project</h3>
+                <p>The idea was to create a simple website which contained the menu, opening hours, some photos, and a bit of information about the purpose that this Christian Coffee Shop serves. I took my time and did things from scratch, creating the CSS
+                    and JavaScript without any frameworks. Because the content was open to change and there was the change of adding more functionality later on, I decided to use the very flexible PHP CMS SilverStripe. This was the biggest challenge for
+                    me, and helped to develop my back-end skills.</p>
+                <p>I am very happy with the result, it draws on elements of The Well's branding and colours, it's fully responsive, the content is presented well, and the CMS is user-friendly so that anyone can make changes</p>
+                <a href="https://www.thewellhopton.org.uk/" target="_blank" class="linkLikeAButton blue" title="The Well">See the site</a><a href="https://github.com/MontyD/thewelltheme" class="linkLikeAButton blue" title="The Well" target="_blank">See the code</a>
             </div>
             <div class="browser">
                 <div class="screen">
@@ -81,25 +161,18 @@
                         <div class="addressbar">
                             <a href="https://thewellhopton.org.uk/" id="addressBar" title="The Well">thewellhopton.org.uk</a>
                         </div>
-                        <div class="speaker"></div>
                     </div>
                     <img class="b-lazy desktop" id="desktopImage" data-src="./dist/img/well.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The Well" />
-                    <img class="b-lazy mobile" id="mobileImage" data-src="./dist/img/well-mobile.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The Well" />
-                </div>
-                <div class="mobileBottom">
-                    <div class="mobileButton"></div>
                 </div>
             </div>
             <div class="clear"></div>
         </article>
         <article class="work odd">
             <div class="floatInfo">
-                <h3>The Well | Hopton</h3>
-                    <p>The idea was to create a simple website which contained the menu, opening hours, some photos, and a bit of information about the purpose that this Christian Coffee Shop serves. I took my time and did things from scratch, creating the
-                        CSS and JavaScript without any frameworks. Because the content was open to change and there was the change of adding more functionality later on, I decided to use the very flexible PHP CMS SilverStripe. This was the biggest challenge
-                        for me, and helped to develop my back-end skills.</p>
-                    <p>I am very happy with the result, it draws on elements of The Well's branding and colours, it's fully responsive, the content is presented well, and the CMS is user-friendly so that anyone can make changes</p>
-                    <a href="https://www.thewellhopton.org.uk/" target="_blank" class="linkLikeAButton blue" title="The Well">See the site</a><a href="https://github.com/MontyD/thewelltheme" class="linkLikeAButton blue" title="The Well" target="_blank">See the code</a>
+                <h3>SlackQuiz | Personal Project</h3>
+                <p>My first go at solo web development produced this amazing peice of engineering. It started life as a chat bot for the Slack platform - you would say "Quizme new question", and it would give a question - then people could answer with "Quizme" followed by their answer. Then I developed a frontend, allowing people to add their own questions and a leadboard section with a nice bar chart. It was written in NodeJS before I understood how asynchronous programming worked, and the frontend was a complete mess of Jquery and regrets. Oh also it used MongoDB - because at the time I was too cool for SQL.</p>
+                <p>It was a very fun little app that provided quite a bit of a laugh in a Slack group. Although the code is a complete mess, it's nice to look back on and see how far I've come.</p>
+              <a href="https://github.com/MontyD/slack-quiz" class="linkLikeAButton blue" title="SlackQuiz" target="_blank">See the code</a>
             </div>
             <div class="browser">
                 <div class="screen">
@@ -110,15 +183,11 @@
                             <div class="maximiseButton fakeButton"></div>
                         </div>
                         <div class="addressbar">
-                            <a href="https://thewellhopton.org.uk/" id="addressBar" title="The Well">thewellhopton.org.uk</a>
+                            it's dead Jim
                         </div>
                         <div class="speaker"></div>
                     </div>
-                    <img class="b-lazy desktop" id="desktopImage" data-src="./dist/img/well.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The Well" />
-                    <img class="b-lazy mobile" id="mobileImage" data-src="./dist/img/well-mobile.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The Well" />
-                </div>
-                <div class="mobileBottom">
-                    <div class="mobileButton"></div>
+                    <img class="b-lazy desktop" id="desktopImage" data-src="./dist/img/slackquiz.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The Well" />
                 </div>
             </div>
             <div class="clear"></div>

@@ -51,7 +51,12 @@ button {
   transition: background 0.3s ease, color 0.3s ease; }
   a.linkLikeAButton.blue,
   button.blue {
-    color: #3E4F69; }
+    background: #3E4F69;
+    border-color: #3E4F69; }
+  a.linkLikeAButton.gold,
+  button.gold {
+    background: #795000;
+    border-color: #795000; }
 
 .innerText {
   max-width: 700px;
@@ -270,10 +275,10 @@ nav#menu {
   width: 80%;
   max-width: 800px;
   border: 1px solid #B5B3B3;
-  box-shadow: 0 2px 3px 0 rgba(224, 224, 224, 0.2);
   border-radius: 3px;
   overflow: hidden;
-  opacity: 1; }
+  opacity: 1;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
   @media (max-width: 580px) {
     .browser {
       border-radius: 10px;

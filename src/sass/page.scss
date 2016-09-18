@@ -1,7 +1,9 @@
 @import "components"; //-- Main
+
 body {
     background-image: linear-gradient(to bottom right, #E0E0E0, #DCDCDC 40%, #B2BDC1);
 }
+
 h1,
 h2,
 h3,
@@ -9,6 +11,7 @@ h4,
 h5 {
     color: #484848;
 }
+
 header {
     display            : block;
     position           : relative;
@@ -20,8 +23,10 @@ header {
     background-repeat  : no-repeat;
     background-position: center center;
     z-index            : 9;
+
     .container {
         height: 100%;
+
         h1 {
             margin        : 0;
             font-size     : 2.5em;
@@ -34,6 +39,7 @@ header {
             border-radius : 0.2em;
             vertical-align: middle;
             line-height   : 50%;
+
             a {
                 color          : $whiteFont;
                 text-decoration: none;
@@ -48,6 +54,7 @@ header {
         }
     }
 }
+
 section {
     h2 {
         padding-top   : 0.4em;
@@ -64,6 +71,7 @@ section {
         }
     }
 }
+
 footer {
     display            : block;
     margin             : 5em auto 0;
@@ -77,6 +85,7 @@ footer {
     color              : $whiteFont;
     padding            : 1em 0;
     border-top         : 5px solid $dark;
+
     h3 {
         margin       : 0;
         font-size    : 2em;
@@ -87,13 +96,16 @@ footer {
         border-radius: 0.2em;
         display      : inline-block;
     }
+
     p {
         text-align: center;
     }
+
     a {
         color: $whiteFont;
     }
 }
+
 article {
     display       : block;
     position      : relative;
@@ -103,16 +115,20 @@ article {
     width         : 100%;
     text-align    : center;
 }
+
 section#sectionCV {
     @extend .page;
     width: 95%;
+
     .slightText {
         margin   : 0.4em auto;
         max-width: 700px;
     }
+
     article#mainCV {
         z-index: 1;
         margin : 5em auto;
+
         #middleLine {
             position        : absolute;
             top             : 0;
@@ -124,6 +140,7 @@ section#sectionCV {
             height          : 100%;
             background-color: $darkColor;
         }
+
         .event {
             display         : block;
             position        : relative;
@@ -137,11 +154,13 @@ section#sectionCV {
             width           : 100%;
             max-width       : 800px;
             font-size       : 0.9em;
+
             &:hover {
                 .circleContainer {
                     transform: translateY(-50%) scale(1.05);
                 }
             }
+
             &::before {
                 bottom          : -2em;
                 left            : 50%;
@@ -153,6 +172,7 @@ section#sectionCV {
                 position        : absolute;
                 background-color: #076A61;
             }
+
             .circleContainer {
                 position  : absolute;
                 top       : 50%;
@@ -169,6 +189,7 @@ section#sectionCV {
                 @media(max-width: 610px) {
                     display: none;
                 }
+
                 .circle {
                     width           : 50%;
                     height          : 0;
@@ -182,6 +203,7 @@ section#sectionCV {
                     margin          : auto;
                 }
             }
+
             h3 {
                 color        : #212121;
                 font-family  : 'Libre Baskerville', serif;
@@ -189,16 +211,19 @@ section#sectionCV {
                 margin-top   : 0;
                 margin-bottom: 0.4em;
             }
+
             .role {
                 font-style: italic;
                 color     : #676767;
             }
+
             p {
                 text-align : left;
                 padding    : 0;
                 line-height: 150%;
                 text-align : justify;
             }
+
             time {
                 position     : absolute;
                 display      : block;
@@ -213,13 +238,16 @@ section#sectionCV {
                 width        : 9em;
                 text-align   : center;
             }
+
             &.left {
                 float: left;
                 width: 48%;
+
                 &::before {
                     bottom: 65%;
                     left  : 104.35%;
                 }
+
                 time {
                     bottom: 64.5%;
                     left  : 104.35%;
@@ -228,6 +256,7 @@ section#sectionCV {
                     &::before {
                         left: 104.4%;
                     }
+
                     .circleContainer {
                         width: 120%;
                     }
@@ -235,29 +264,35 @@ section#sectionCV {
                 @media(max-width:820px) {
                     float: none;
                     width: 90%;
+
                     &::before {
                         bottom: -2em;
                         left  : 50%;
                     }
+
                     time {
                         bottom: -2.6em;
                         left  : 50%;
                     }
+
                     .circleContainer {
                         width: 90%;
                     }
                 }
             }
+
             &.right {
                 float     : right;
                 width     : 48%;
                 text-align: right;
+
                 &::before {
                     bottom      : 25%;
                     left        : auto;
                     right       : 104.35%;
                     margin-right: -.5em;
                 }
+
                 time {
                     bottom      : 24.5%;
                     right       : 104.35%;
@@ -268,6 +303,7 @@ section#sectionCV {
                     &::before {
                         right: 104.4%;
                     }
+
                     .circleContainer {
                         width: 120%;
                     }
@@ -275,13 +311,16 @@ section#sectionCV {
                 @media(max-width:820px) {
                     float: none;
                     width: 90%;
+
                     &::before {
                         bottom: -2em;
                         left  : 50%;
                     }
+
                     .circleContainer {
                         width: 90%;
                     }
+
                     time {
                         bottom      : -2.6em;
                         margin-right: 0;
@@ -289,47 +328,59 @@ section#sectionCV {
                     }
                 }
             }
+
             &.join {
                 margin-top: 14em;
             }
+
             &.join-half {
                 margin-top: 8em;
             }
+
             &.feature {
                 margin-top   : 6em;
                 margin-bottom: 6em;
                 clear        : both;
             }
+
             &.top {
                 margin-top: 0;
             }
+
             &.blue {
                 border-color: #3C5586;
+
                 &::before {
                     background-color: #3C5586;
                 }
+
                 .circle {
                     background-color: #3C5586;
                 }
             }
+
             &.yellow {
-                border-color: #A57B2A;
+                border-color: $gold;
+
                 &::before {
-                    background-color: #A57B2A;
+                    background-color: $gold;
                 }
+
                 .circle {
-                    background-color: #A57B2A;
+                    background-color: $gold;
                 }
             }
         }
     }
 }
+
 section#work {
     @extend .page;
     width        : 95%;
     padding-left : 0;
     padding-right: 0;
 }
+
 article.work {
     display   : block;
     position  : relative;
@@ -338,42 +389,46 @@ article.work {
     width     : 100%;
     padding   : 7em 1.5em;
     box-sizing: border-box;
+
     &::before {
-        content         : ' ';
-        position        : absolute;
-        left            : -1em;
-        top             : 4em;
-        height          : 84%;
-        width           : 110%;
-        opacity         : 0.3;
-        background-image: linear-gradient(to bottom right,#ffffff,#042275);
-        border          : 1px solid $whiteFont;
-        transform       : rotate(2deg);
-        z-index         : -1;
+        content   : ' ';
+        position  : absolute;
+        left      : -1em;
+        top       : 4em;
+        height    : 84%;
+        width     : 110%;
+        opacity   : 0.2;
+        background: #3C5586;
+        border    : 1px solid $whiteFont;
+        transform : rotate(2deg);
+        z-index   : -1;
     }
+
     .floatInfo {
-      float: right;
-      width: 49%;
+        float: right;
+        width: 49%;
     }
+
     h3 {
         font-family: 'Libre Baskerville', serif;
-        color      : $darkBlue;
         padding    : 0.5em 0 0.5em 0.5em;
         font-size  : 1.8em;
         margin     : 0 auto 0.2em;
         z-index    : 2;
         text-align : right;
     }
+
     p {
         margin-bottom: 1%;
         z-index      : 2;
-        color        : $darkBlue;
         font-size    : 0.9em;
-        padding      : 1em 0 0.5em 0.5em ;
+        padding      : 1em 0 0.5em 0.5em;
     }
+
     a.linkLikeAButton {
-      margin-top: 1.5em;
+        margin-top: 1.5em;
     }
+
     .browser {
         float         : left;
         max-height    : none;
@@ -383,22 +438,26 @@ article.work {
         margin        : 0;
         z-index       : 2;
     }
+
     &.odd {
-      &::before {
-        transform: rotate(-2deg);
-        background-image: linear-gradient(to bottom left,#ffffff,#042275);
-      }
-      .floatInfo {
-        float: left;
-      }
-      h3 {
-        text-align: left;
-      }
-      .browser {
-        float: right;
-      }
+        &::before {
+            transform       : rotate(-2deg);
+        }
+
+        .floatInfo {
+            float: left;
+        }
+
+        h3 {
+            text-align: left;
+        }
+
+        .browser {
+            float: right;
+        }
     }
 }
+
 aside.container {
     max-width: 700px;
 }
