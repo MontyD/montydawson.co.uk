@@ -288,10 +288,10 @@ nav#menu {
     height: 10%;
     background: #D0D0D0;
     margin: 0;
-    padding: 5px 0;
+    padding: 3px 0;
     box-sizing: border-box; }
     .browser .mobileBottom .mobileButton {
-      background: #696969;
+      background: #9c9c9c;
       height: 20px;
       width: 20px;
       border-radius: 10px;
@@ -310,7 +310,7 @@ nav#menu {
     margin: 0 auto;
     width: 40px;
     height: 4px;
-    background: #696969;
+    background: #9c9c9c;
     border-radius: 4px;
     top: 12px;
     right: 0;
@@ -354,7 +354,7 @@ nav#menu {
     .browser.breakMobile {
       border-radius: 10px;
       max-width: 12em;
-      max-height: 20em;
+      max-height: 55vh;
       height: 20em;
       margin: 6% auto; } }
   @media (max-width: 580px) {
@@ -1030,7 +1030,7 @@ article.work {
   article.work::before {
     content: ' ';
     position: absolute;
-    left: -1em;
+    left: -2em;
     top: 4em;
     height: 84%;
     width: 110%;
@@ -1082,6 +1082,14 @@ article.work {
         width: 90%;
         max-width: 600px;
         margin: 2em auto; } }
+    @media (max-width: 600px) {
+      article.work .browser {
+        width: 100%;
+        border-radius: 0; }
+        article.work .browser .toolbar {
+          display: none; }
+        article.work .browser img {
+          margin: 0; } }
   article.work.odd::before {
     -webkit-transform: rotate(-2deg);
             transform: rotate(-2deg); }

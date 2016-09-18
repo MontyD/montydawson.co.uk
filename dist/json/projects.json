@@ -1,6 +1,28 @@
 {
   "projects": [
     {
+      "title": "Todoist",
+      "desktopImage": "todoist.png",
+      "mobileImage": "todoist-mobile.png",
+      "description": "A real time Todolist web app, allowing people to collaborate on todolists, with all members receiving live updates as changes are made. Built on NodeJS, Postgres, Angular and Websockets. Deployed to Heroku.",
+      "siteLink": "http://todoist.montydawson.co.uk/",
+      "moreInfo": "./work.html#todoist"
+    },
+    {
+      "title": "Dublove",
+      "desktopImage": "dublove.png",
+      "mobileImage": "dublove-mobile.png",
+      "description": "A fully functional responsive website, developed using the PHP CMS Silverstripe. I developed the theme from scratch, utilising a range of techniques to keep the site lightweight but also fully of content.",
+      "moreInfo": "./work.html#under-three"
+    },
+    {
+      "title": "3 Minute Website",
+      "desktopImage": "website.png",
+      "mobileImage": "website-mobile.png",
+      "description": "A small personal project to design a website that codes itself in real time - with the code being displayed to the user alongside the result. A fun exercise in modular JS.",
+      "moreInfo": "./work.html#dublove"
+    },
+    {
       "title": "The Well Hopton",
       "desktopImage": "well.png",
       "mobileImage": "well-mobile.png",
