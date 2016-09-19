@@ -216,6 +216,12 @@ button {
     }
 }
 
+.mobile-hidden {
+  @media(max-width: 775px) {
+    display: none !important;
+  }
+}
+
 .home .opener {
     animation-name           : open;
     animation-duration       : 3s;

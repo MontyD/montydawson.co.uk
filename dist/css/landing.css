@@ -152,6 +152,10 @@ button {
     -webkit-transition: opacity 0.5s ease;
     transition: opacity 0.5s ease; }
 
+@media (max-width: 775px) {
+  .mobile-hidden {
+    display: none !important; } }
+
 .home .opener {
   -webkit-animation-name: open;
           animation-name: open;
@@ -896,6 +900,9 @@ section#first {
   font-family: 'Libre Baskerville', serif;
   text-align: center;
   color: #FAFAFA; }
+  @media (max-width: 775px) {
+    #second {
+      background-color: #2D6B60; } }
   #second #aboutMe {
     display: inline; }
   #second #skills {

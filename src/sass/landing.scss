@@ -160,6 +160,9 @@ section#first {
     font-family     : 'Libre Baskerville', serif;
     text-align      : center;
     color           : $whiteFont;
+    @media(max-width: 775px) {
+      background-color: #2D6B60;
+    }
 
     #aboutMe {
         display: inline;
