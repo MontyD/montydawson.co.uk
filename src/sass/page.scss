@@ -2,6 +2,7 @@
 
 body {
     background-image: linear-gradient(to bottom right, #E0E0E0, #DCDCDC 40%, #B2BDC1);
+    overflow-x: hidden;
 }
 
 h1,
@@ -437,6 +438,10 @@ article.work {
         z-index      : 2;
         font-size    : 0.9em;
         padding      : 1em 0 0.5em 0.5em;
+
+        @media(max-width: 600px) {
+          padding: 1em 0 0.5em;
+        }
     }
 
     a.linkLikeAButton {
